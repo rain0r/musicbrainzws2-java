@@ -13,12 +13,13 @@
       <url>http://www.gnu.org/copyleft/gpl.html</url>
     </license>
   </licenses>
+
   <scm>
     <connection>scm:git:ssh://github.com/rain0r/musicbrainzws2-java.git</connection>
     <developerConnection>scm:git:ssh://git@git.hihn.org:3389/rain0r/musicbrainzws2-java.git</developerConnection>
+    <url>https://git.hihn.org:3389/rain0r/musicbrainzws2-java.git</url>
     <tag>HEAD</tag>
-    <url>ssh://git@git.hihn.org:3389/rain0r/musicbrainzws2-java.git</url>
-  </scm>
+</scm>
 
   <distributionManagement>
     <snapshotRepository>
