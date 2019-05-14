@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.hihn</groupId>
 	<artifactId>musicbrainzws2-java</artifactId>
-	<version>3.0.2-SNAPSHOT</version>
+	<version>3.0.2</version>
 	<packaging>jar</packaging>
 	<name>musicbrainzws2-java</name>
 	<url>https://github.com/rain0r/musicbrainzws2-java</url>
@@ -20,7 +18,7 @@
 		<connection>scm:git:ssh://git@git.hihn.org:3389/rain0r/musicbrainzws2-java.git</connection>
 		<developerConnection>scm:git:ssh://git@git.hihn.org:3389/rain0r/musicbrainzws2-java.git</developerConnection>
 		<url>ssh://git@git.hihn.org:3389/rain0r/musicbrainzws2-java.git</url>
-		<tag>HEAD</tag>
+		<tag>musicbrainzws2-java-3.0.2</tag>
 	</scm>
 
 	<!-- <distributionManagement> -->
