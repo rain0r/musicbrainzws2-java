@@ -11,5 +11,5 @@ rm dependency-reduced-pom.xml pom.xml.releaseBackup release.properties
 
 # mvn clean -q
 # mvn deploy -X
-mvn release:prepare -Phihn-releases
-mvn release:perform -Phihn-releases
+mvn release:prepare -Possrh
+mvn release:perform -Possrh
