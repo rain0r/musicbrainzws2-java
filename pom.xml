@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.hihn</groupId>
+  <artifactId>musicbrainzws2-java</artifactId>
+  <version>3.0.2-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>musicbrainzws2-java</name>
+  <url>https://github.com/rain0r/musicbrainzws2-java</url>
+  <licenses>
+    <license>
+      <name>GNU General Public License 3.0</name>
+      <url>http://www.gnu.org/copyleft/gpl.html</url>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:ssh://github.com/rain0r/musicbrainzws2-java.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/rain0r/musicbrainzws2-java.git</developerConnection>
+    <url>https://github.com/rain0r/musicbrainzws2-java.git</url>
+    <tag>HEAD</tag>
+  </scm>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.8</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.9</version>
+    </dependency>
+    <dependency>
+      <groupId>jdom</groupId>
+      <artifactId>jdom</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>fm.last</groupId>
+      <artifactId>coverartarchive-api</artifactId>
+      <version>2.1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13-beta-3</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
