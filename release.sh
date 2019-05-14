@@ -6,7 +6,7 @@ rm dependency-reduced-pom.xml pom.xml.releaseBackup release.properties
 
 tmp='.tmp.commit'
 
-git pull
+git pull github
 git status --porcelain -uno > $tmp
 git commit -a -F $tmp
 git push github
