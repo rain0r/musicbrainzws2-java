@@ -4,7 +4,15 @@
 touch dependency-reduced-pom.xml pom.xml.releaseBackup release.properties
 rm dependency-reduced-pom.xml pom.xml.releaseBackup release.properties
 
-/home/rainer/scripts/lazy-git.sh
+tmp='.tmp.commit'
+
+git pull
+git status --porcelain -uno > $tmp
+git commit -a -F $tmp
+git push github
+rm $tmp
+
+
 
 mvn clean -q
 # mvn deploy -X
