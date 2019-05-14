@@ -8,6 +8,4 @@ rm dependency-reduced-pom.xml pom.xml.releaseBackup release.properties
 
 mvn clean -q
 mvn release:prepare -X
-mvn release:perform -X
-
-# mvn javadoc:javadoc 
+# mvn release:perform -X
