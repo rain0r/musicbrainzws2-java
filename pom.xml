@@ -15,10 +15,10 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:ssh://github.com/rain0r/musicbrainzws2-java.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com/rain0r/musicbrainzws2-java.git</developerConnection>
-		<url>https://github.com/rain0r/musicbrainzws2-java.git</url>
-		<tag>musicbrainzws2-java-3.0.2</tag>
+		<connection>scm:git:ssh://git@git.hihn.org:3389/rain0r/musicbrainzws2-java.git</connection>
+		<developerConnection>scm:git:ssh://git@git.hihn.org:3389/rain0r/musicbrainzws2-java.git</developerConnection>
+		<url>ssh://git@git.hihn.org:3389/rain0r/musicbrainzws2-java.git</url>
+		<tag>HEAD</tag>
 	</scm>
 
 	<distributionManagement>
