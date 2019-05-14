@@ -17,6 +17,7 @@
     <connection>scm:git:ssh://github.com/rain0r/musicbrainzws2-java.git</connection>
     <developerConnection>scm:git:ssh://git@git.hihn.org:3389/rain0r/musicbrainzws2-java.git</developerConnection>
     <tag>HEAD</tag>
+    <url>ssh://git@git.hihn.org:3389/rain0r/musicbrainzws2-java.git</url>
   </scm>
 
   <distributionManagement>
