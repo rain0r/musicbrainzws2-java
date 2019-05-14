@@ -2,6 +2,8 @@
 
 # rm -rf ~/.m2/repository/
 
+clear
+
 touch dependency-reduced-pom.xml pom.xml.releaseBackup release.properties
 rm dependency-reduced-pom.xml pom.xml.releaseBackup release.properties
 
