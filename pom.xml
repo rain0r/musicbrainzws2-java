@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.hihn</groupId>
 	<artifactId>musicbrainzws2-java</artifactId>
-	<version>3.0.2</version>
+	<version>3.0.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>musicbrainzws2-java</name>
 	<url>https://github.com/rain0r/musicbrainzws2-java</url>
