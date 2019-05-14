@@ -19,6 +19,18 @@
     <url>https://github.com/rain0r/musicbrainzws2-java.git</url>
     <tag>HEAD</tag>
   </scm>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>punica-snapshots</id>
+      <url>http://punica/nexus/repository/maven-snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>punica-releases</id>
+      <url>http://punica/nexus/repository/maven-releases/</url>
+    </repository>
+  </distributionManagement>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
