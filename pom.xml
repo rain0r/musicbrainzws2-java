@@ -22,12 +22,12 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>punica-snapshots</id>
-      <url>http://punica/nexus/repository/maven-snapshots/</url>
+      <id>hihn-snapshots</id>
+      <url>http://punica/nexus/repository/hihn-snapshots/</url>
     </snapshotRepository>
     <repository>
-      <id>punica-releases</id>
-      <url>http://punica/nexus/repository/maven-releases/</url>
+      <id>hihn-releases</id>
+      <url>http://punica/nexus/repository/hihn-releases/</url>
     </repository>
   </distributionManagement>
 
