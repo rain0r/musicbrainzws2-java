@@ -10,4 +10,10 @@ This is a fork of a fork of `musicbrainzws2-java`, originally hosted [here](http
 
 
 ## How to use
-tbd
+```
+<dependency>
+  <groupId>org.hihn</groupId>
+  <artifactId>musicbrainzws2-java</artifactId>
+  <version>3.0.15</version>
+</dependency>
+```
