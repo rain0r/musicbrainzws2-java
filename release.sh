@@ -10,5 +10,4 @@ clear
 
 # mvn clean -q
 # mvn deploy -X
-mvn release:prepare
-mvn release:perform
+mvn release:prepare && mvn release:perform
