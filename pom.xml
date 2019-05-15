@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.hihn</groupId>
   <artifactId>musicbrainzws2-java</artifactId>
-  <version>3.0.12</version>
+  <version>3.0.13</version>
   <packaging>jar</packaging>
   <name>musicbrainzws2-java</name>
   <url>https://github.com/rain0r/musicbrainzws2-java</url>
@@ -17,7 +17,7 @@
     <connection>scm:git:ssh://git@github.com/rain0r/musicbrainzws2-java.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/rain0r/musicbrainzws2-java.git</developerConnection>
     <url>ssh://git@github.com/rain0r/musicbrainzws2-java.git</url>
-    <tag>musicbrainzws2-java-3.0.12</tag>
+    <tag>musicbrainzws2-java-3.0.13</tag>
   </scm>
   <distributionManagement>
     <snapshotRepository>
