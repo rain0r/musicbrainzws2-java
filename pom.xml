@@ -8,6 +8,25 @@
   <packaging>jar</packaging>
   <name>musicbrainzws2-java</name>
   <url>https://github.com/rain0r/musicbrainzws2-java</url>
+   
+    <description>Java binding for MusicBrainz XML Web Service/Version 2</description>
+    <developers>
+        <developer>
+            <id>rain0r</id>
+            <name>Rainer</name>
+            <email>hihn.rainer@gmail.com</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Berlin</timezone>
+        </developer>
+    </developers>
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/rain0r/musicbrainzws2-java/issues</url>
+</issueManagement>
+	
+	
   <licenses>
     <license>
       <name>GNU General Public License 3.0</name>
