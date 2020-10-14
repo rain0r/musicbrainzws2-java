@@ -49,16 +49,6 @@
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
-  <!-- 	<distributionManagement> -->
-  <!-- 		<snapshotRepository> -->
-  <!-- 			<id>hihn-snapshots</id> -->
-  <!-- 			<url>http://punica/nexus/repository/hihn-snapshots/</url> -->
-  <!-- 		</snapshotRepository> -->
-  <!-- 		<repository> -->
-  <!-- 			<id>hihn-releases</id> -->
-  <!-- 			<url>http://punica/nexus/repository/hihn-releases/</url> -->
-  <!-- 		</repository> -->
-  <!-- 	</distributionManagement> -->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
