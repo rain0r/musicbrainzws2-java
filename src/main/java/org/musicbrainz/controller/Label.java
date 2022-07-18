@@ -4,6 +4,7 @@
  */
 package org.musicbrainz.controller;
 
+import org.apache.commons.lang3.StringUtils;
 import org.musicbrainz.MBWS2Exception;
 import org.musicbrainz.filter.browsefilter.ReleaseBrowseFilterWs2;
 import org.musicbrainz.filter.searchfilter.LabelSearchFilterWs2;
@@ -229,7 +230,7 @@ public class Label extends Controller {
 					// save some field that come from search, but is missing in
 					// lookUp http://tickets.musicbrainz.org/browse/MBS-3982
 
-					if (transit.getDisambiguation() == null || transit.getDisambiguation().isEmpty()) {
+					if (!StringUtils.isBlank(transit.getDisambiguation())) {
 
 						String dis = ((LabelWs2) getIncoming()).getDisambiguation();
 						transit.setDisambiguation(dis);
