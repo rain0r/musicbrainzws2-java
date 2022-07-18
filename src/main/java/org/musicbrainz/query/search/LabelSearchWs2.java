@@ -86,4 +86,5 @@ public class LabelSearchWs2 extends SearchWs2 {
 		}
 		return le;
 	}
+
 }

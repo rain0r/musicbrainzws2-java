@@ -5,6 +5,7 @@ package org.mc2.util.exceptions;
  */
 
 public class MC2Exception extends Exception {
+
 	private static final long serialVersionUID = 1L;
 
 	public MC2Exception() {

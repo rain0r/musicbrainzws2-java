@@ -3,8 +3,8 @@ package org.musicbrainz.query.submission;
 import org.musicbrainz.wsxml.MbXMLException;
 
 /**
- * A submission exception indicates that the web service submission (post) request was invalid (e.g. invalir entity
- * type).
+ * A submission exception indicates that the web service submission (post) request was
+ * invalid (e.g. invalir entity type).
  */
 public class SubmissionException extends MbXMLException {
 

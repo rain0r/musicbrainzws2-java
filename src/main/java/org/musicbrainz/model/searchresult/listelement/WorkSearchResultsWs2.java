@@ -34,4 +34,5 @@ public class WorkSearchResultsWs2 extends ListElement {
 	public WorkListWs2 getWorkList() {
 		return workList;
 	}
+
 }

@@ -8,7 +8,7 @@ import org.musicbrainz.wsxml.element.ListElement;
 
 /**
  * A list of Artists
- * 
+ *
  */
 public class ArtistListWs2 extends ListElement {
 
@@ -30,9 +30,8 @@ public class ArtistListWs2 extends ListElement {
 
 	/**
 	 * Convenience method to adds an artist to the list.
-	 * 
+	 *
 	 * This will create a new <code>ArrayList</code> if {@link #artists} is null.
-	 * 
 	 * @param artist
 	 */
 	public void addArtist(ArtistWs2 artist) {
@@ -49,4 +48,5 @@ public class ArtistListWs2 extends ListElement {
 
 		artists.addAll(artistList);
 	}
+
 }

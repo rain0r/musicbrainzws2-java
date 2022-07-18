@@ -87,4 +87,5 @@ public class ArtistSearchWs2 extends SearchWs2 {
 		}
 		return le;
 	}
+
 }

@@ -80,4 +80,5 @@ public class ReleaseGroupIncludesWs2 extends IncludesWs2 {
 
 		return target;
 	}
+
 }

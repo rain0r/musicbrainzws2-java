@@ -6,13 +6,15 @@ import java.util.Map;
  * <p>
  * A filter for the release collection.
  * </p>
- * 
+ *
  * <p>
- * <em>Note that these filter properties properties and <code>query</code> may not be used together.</em>
+ * <em>Note that these filter properties properties and <code>query</code> may not be used
+ * together.</em>
  * </p>
- * 
+ *
  */
 public class ReleaseSearchFilterWs2 extends SearchFilterWs2 {
+
 	/**
 	 * A String containing the release's title
 	 */
@@ -20,7 +22,7 @@ public class ReleaseSearchFilterWs2 extends SearchFilterWs2 {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.musicbrainz.webservice.Filter()
 	 */
 	public ReleaseSearchFilterWs2() {
@@ -29,7 +31,7 @@ public class ReleaseSearchFilterWs2 extends SearchFilterWs2 {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.musicbrainz.webservice.Filter#createParameters()
 	 */
 	@Override

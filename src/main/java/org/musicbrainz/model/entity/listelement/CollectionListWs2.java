@@ -8,7 +8,7 @@ import org.musicbrainz.wsxml.element.ListElement;
 
 /**
  * A list of Collections
- * 
+ *
  */
 public class CollectionListWs2 extends ListElement {
 
@@ -30,9 +30,8 @@ public class CollectionListWs2 extends ListElement {
 
 	/**
 	 * Convenience method to adds an collection to the list.
-	 * 
+	 *
 	 * This will create a new <code>ArrayList</code> if {@link #collections} is null.
-	 * 
 	 * @param collection
 	 */
 	public void addCollection(CollectionWs2 collection) {
@@ -49,4 +48,5 @@ public class CollectionListWs2 extends ListElement {
 
 		collections.addAll(collectionList);
 	}
+
 }

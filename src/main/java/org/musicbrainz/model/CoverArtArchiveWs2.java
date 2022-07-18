@@ -10,12 +10,14 @@ import org.musicbrainz.coverart.ImageGetter;
 /**
  * <p>
  * A Cover Art Archive definition.
- * 
- * ... nothing found in MB documentation. see http://tickets.musicbrainz.org/browse/MBS-4536
- * 
+ *
+ * ... nothing found in MB documentation. see
+ * http://tickets.musicbrainz.org/browse/MBS-4536
+ *
  * </p>
  */
 public class CoverArtArchiveWs2 {
+
 	private static Logger log = Logger.getLogger(CoverArtArchiveWs2.class.getName());
 
 	/**
@@ -84,4 +86,5 @@ public class CoverArtArchiveWs2 {
 	public int getCount() {
 		return count;
 	}
+
 }

@@ -16,6 +16,7 @@ import org.musicbrainz.model.entity.listelement.ReleaseListWs2;
  * </p>
  */
 public class RecordingWs2 extends EntityWs2 {
+
 	private String title;
 
 	private Long durationInMillis;

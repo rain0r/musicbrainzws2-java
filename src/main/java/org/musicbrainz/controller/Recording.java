@@ -1,6 +1,6 @@
 /*
  * A controller for the Recording Entity.
- * 
+ *
  */
 package org.musicbrainz.controller;
 
@@ -204,7 +204,8 @@ public class Recording extends Controller {
 
 			if (transit == null)
 				return null;
-			if (getRecording() == null || !getRecording().equals(transit)) // recording is changed.
+			if (getRecording() == null || !getRecording().equals(transit)) // recording is
+																			// changed.
 			{
 				setEntity(transit);
 				setIncluded(inc);
@@ -344,7 +345,8 @@ public class Recording extends Controller {
 
 		if (recordinginc == null)
 			return inc;
-		// if (recordinginc.isRecordingLevelRelations()) inc.setRecordingLevelRelations(true);
+		// if (recordinginc.isRecordingLevelRelations())
+		// inc.setRecordingLevelRelations(true);
 		// if (recordinginc.isWorkLevelRelations()) inc.setWorkLevelRelations(true);
 
 		return inc;

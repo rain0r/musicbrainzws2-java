@@ -8,7 +8,7 @@ import org.musicbrainz.wsxml.element.Metadata;
 
 /**
  * An interface all concrete web service classes have to implement.
- * 
+ *
  */
 public interface WebService {
 
@@ -16,21 +16,20 @@ public interface WebService {
 	 * <p>
 	 * Queries the web service.
 	 * </p>
-	 * 
+	 *
 	 * <p>
-	 * Using this method, you can either get a resource by id (using the <code>id</code> parameter, or perform a query
-	 * on all resources of a type.
+	 * Using this method, you can either get a resource by id (using the <code>id</code>
+	 * parameter, or perform a query on all resources of a type.
 	 * </p>
-	 * 
+	 *
 	 * <p>
-	 * The <code>filter</code> and the <code>id</code> parameter exclude each other. If you are using a filter, you may
-	 * not set <code>id</code> and vice versa.
+	 * The <code>filter</code> and the <code>id</code> parameter exclude each other. If
+	 * you are using a filter, you may not set <code>id</code> and vice versa.
 	 * </p>
-	 * 
+	 *
 	 * <p>
 	 * Returns a populated {@link Metadata} object containing the result.
 	 * </p>
-	 * 
 	 * @param entity a string containing the entity's name
 	 * @param id a string containing a UUID, or the empty string
 	 * @param includeParams a list containing values for the 'inc' parameter
@@ -44,7 +43,6 @@ public interface WebService {
 
 	/**
 	 * Submit data to the web service.
-	 * 
 	 * @param metadata a Metada Object
 	 * @return {@link Metadata}
 	 * @throws WebServiceException
@@ -54,10 +52,10 @@ public interface WebService {
 
 	/**
 	 * Put data to the web service.
-	 * 
 	 * @param entity A string containing the entity's name
 	 * @param id A string containing a UUID, or the empty string
-	 * @param data A List containing the data to put, directly in the URL (i.e. collection releases).
+	 * @param data A List containing the data to put, directly in the URL (i.e. collection
+	 * releases).
 	 * @throws WebServiceException
 	 * @throws MbXMLException
 	 */
@@ -65,10 +63,10 @@ public interface WebService {
 
 	/**
 	 * Delete data from the web service.
-	 * 
 	 * @param entity A string containing the entity's name
 	 * @param id A string containing a UUID, or the empty string
-	 * @param data A List containing the data to delete, directly in the URL (i.e. collection releases).
+	 * @param data A List containing the data to delete, directly in the URL (i.e.
+	 * collection releases).
 	 * @return {@link Metadata}
 	 * @throws WebServiceException
 	 * @throws MbXMLException
@@ -80,4 +78,5 @@ public interface WebService {
 	public void setPassword(String password);
 
 	public void setClient(String client);
+
 }

@@ -8,16 +8,16 @@ import org.musicbrainz.wsxml.element.ListElement;
 import org.musicbrainz.wsxml.element.Metadata;
 
 /*
- * 
+ *
  * Lucerne Search Implementation.
- * 
- * Searches are implemented by the search server and are documented at 
- * Next_Generation_Schema/SearchServerXML. 
+ *
+ * Searches are implemented by the search server and are documented at
+ * Next_Generation_Schema/SearchServerXML.
  * see: http://musicbrainz.org/doc/Next_Generation_Schema/SearchServerXML
  *
  * Use a filter subclass to set the search parameters.
  * Return a SearchResult subtype.
- * 
+ *
  */
 
 public class SearchWs2 extends QueryWs2 {
@@ -35,7 +35,6 @@ public class SearchWs2 extends QueryWs2 {
 
 	/**
 	 * Custom WebService Constructor
-	 * 
 	 * @param ws An implementation of {@link WebService}
 	 */
 	protected SearchWs2(WebService ws, SearchFilterWs2 filter) {

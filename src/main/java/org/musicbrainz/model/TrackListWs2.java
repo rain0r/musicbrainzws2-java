@@ -11,9 +11,10 @@ import org.musicbrainz.wsxml.element.ListElement;
  * <p>
  * A List of Track Info (Track & catalog number)referred by a release
  * </p>
- * 
+ *
  */
 public class TrackListWs2 extends ListElement {
+
 	private static Logger log = Logger.getLogger(TrackListWs2.class.getName());
 
 	private List<TrackWs2> tracks = new ArrayList<TrackWs2>();
@@ -54,4 +55,5 @@ public class TrackListWs2 extends ListElement {
 	public String getDuration() {
 		return CalendarUtils.calcDurationString(this.getDurationInMillis());
 	}
+
 }

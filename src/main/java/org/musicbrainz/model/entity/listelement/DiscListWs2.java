@@ -11,9 +11,10 @@ import org.musicbrainz.wsxml.element.ListElement;
  * <p>
  * A List of Disc Info (Disc & catalog number)referred by a release
  * </p>
- * 
+ *
  */
 public class DiscListWs2 extends ListElement {
+
 	private static Logger log = Logger.getLogger(DiscListWs2.class.getName());
 
 	/**
@@ -46,7 +47,8 @@ public class DiscListWs2 extends ListElement {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#toString()
 	 */
+
 }

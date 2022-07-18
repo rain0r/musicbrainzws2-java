@@ -80,19 +80,20 @@ import org.musicbrainz.wsxml.element.Metadata;
  * <p>
  * A parser for the Music Metadata XML format.
  * </p>
- * 
+ *
  * <p>
- * This parser supports all basic features and extensions defined by MusicBrainz, including unlimited document nesting.
- * By default it reads an XML document from a stream and returns an object tree representing the document using the
- * flexible {@link Metadata} class.
+ * This parser supports all basic features and extensions defined by MusicBrainz,
+ * including unlimited document nesting. By default it reads an XML document from a stream
+ * and returns an object tree representing the document using the flexible
+ * {@link Metadata} class.
  * </p>
- * 
+ *
  * <p>
- * The implementation tries to be as permissive as possible. Invalid contents are skipped, but documents have to be
- * well-formed and using the correct namespace. In case of unrecoverable errors, a {@link MbXMLParseException} exception
- * is raised.
+ * The implementation tries to be as permissive as possible. Invalid contents are skipped,
+ * but documents have to be well-formed and using the correct namespace. In case of
+ * unrecoverable errors, a {@link MbXMLParseException} exception is raised.
  * </p>
- * 
+ *
  */
 public class JDOMParserWs2 extends DomainsWs2 implements MbXmlParser {
 
@@ -107,7 +108,7 @@ public class JDOMParserWs2 extends DomainsWs2 implements MbXmlParser {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.musicbrainz.wsxml.MbXmlParser#parse(java.io.InputStream)
 	 */
 	public Metadata parse(InputStream inputStream) throws MbXMLException {
@@ -359,7 +360,8 @@ public class JDOMParserWs2 extends DomainsWs2 implements MbXmlParser {
 
 		ArtistWs2 artist = new ArtistWs2();
 		// artist.setIdUri(MbUtils.convertIdToURI(node.getAttributeValue(ID), ARTIST) );
-		// artist.setType(MbUtils.convertTypeToURI(node.getAttributeValue(TYPE), EntityWs2.NS_MMD_2));
+		// artist.setType(MbUtils.convertTypeToURI(node.getAttributeValue(TYPE),
+		// EntityWs2.NS_MMD_2));
 
 		Iterator itr = node.getAttributes().iterator();
 		while (itr.hasNext()) {
@@ -433,7 +435,8 @@ public class JDOMParserWs2 extends DomainsWs2 implements MbXmlParser {
 				addAliases(child, artist);
 			}
 			/*
-			 * is in mmd but not allowed in ws. else if (LABELLIST.equals(child.getName())) { addLabelsToList(child,
+			 * is in mmd but not allowed in ws. else if
+			 * (LABELLIST.equals(child.getName())) { addLabelsToList(child,
 			 * artist.getLabelList()); }
 			 */
 			else if (RELATIONLIST.equals(child.getName())) {
@@ -2037,10 +2040,9 @@ public class JDOMParserWs2 extends DomainsWs2 implements MbXmlParser {
 
 	/**
 	 * Returns an attribute of the given element.
-	 * 
-	 * If there is no attribute with that name or the attribute doesn'recording match the regular expression, default is
-	 * returned.
-	 * 
+	 *
+	 * If there is no attribute with that name or the attribute doesn'recording match the
+	 * regular expression, default is returned.
 	 * @param element
 	 * @param attrName
 	 * @param regex
@@ -2132,4 +2134,5 @@ public class JDOMParserWs2 extends DomainsWs2 implements MbXmlParser {
 		}
 		return false;
 	}
+
 }

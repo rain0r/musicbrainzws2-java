@@ -1,6 +1,6 @@
 /*
  * A controller for the ReleaseGroup Entity.
- * 
+ *
  */
 package org.musicbrainz.controller;
 
@@ -211,7 +211,9 @@ public class ReleaseGroup extends Controller {
 
 			if (transit == null)
 				return null;
-			if (getReleaseGroup() == null || !getReleaseGroup().equals(transit)) // releaseGroup is changed.
+			if (getReleaseGroup() == null || !getReleaseGroup().equals(transit)) // releaseGroup
+																					// is
+																					// changed.
 			{
 				setEntity(transit);
 				setIncluded(inc);
@@ -343,7 +345,8 @@ public class ReleaseGroup extends Controller {
 		if (releaseGroupinc == null)
 			return inc;
 
-		// if (recordinginc.isRecordingLevelRelations()) inc.setRecordingLevelRelations(true);
+		// if (recordinginc.isRecordingLevelRelations())
+		// inc.setRecordingLevelRelations(true);
 		// if (recordinginc.isWorkLevelRelations()) inc.setWorkLevelRelations(true);
 
 		return inc;

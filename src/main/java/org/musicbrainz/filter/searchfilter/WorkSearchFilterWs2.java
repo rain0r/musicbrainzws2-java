@@ -6,9 +6,10 @@ import java.util.Map;
  * <p>
  * A filter for the work collection.
  * </p>
- * 
+ *
  * <p>
- * Note that the <code>name</code> and <code>query</code> properties may not be used together.
+ * Note that the <code>name</code> and <code>query</code> properties may not be used
+ * together.
  * </p>
  */
 public class WorkSearchFilterWs2 extends SearchFilterWs2 {

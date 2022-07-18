@@ -20,8 +20,8 @@ import org.musicbrainz.wsxml.impl.JDOMParserWs2;
 import org.musicbrainz.wsxml.impl.JDOMWriterWs2;
 
 /**
- * A default abstract web service implementation that provides common properties of a web service client that can be
- * extended.
+ * A default abstract web service implementation that provides common properties of a web
+ * service client that can be extended.
  */
 public abstract class DefaultWebServiceWs2 extends DomainsWs2 implements WebService {
 
@@ -33,8 +33,8 @@ public abstract class DefaultWebServiceWs2 extends DomainsWs2 implements WebServ
 	protected static final String URL_ENCODING = "UTF-8";
 
 	/**
-	 * Name of this library that will be used as part of the default user agent string or as part of a custom user agent
-	 * string.
+	 * Name of this library that will be used as part of the default user agent string or
+	 * as part of a custom user agent string.
 	 *
 	 * @see DefaultWebServiceWs2#createUserAgent()
 	 * @see DefaultWebServiceWs2#createUserAgent(String, String, String)
@@ -44,10 +44,11 @@ public abstract class DefaultWebServiceWs2 extends DomainsWs2 implements WebServ
 	 */
 	protected static final String USER_AGENT_LIB_NAME = "MusicBrainz-Java";
 
-	// TODO Read the constant value from properties file that gets written during maven build
+	// TODO Read the constant value from properties file that gets written during maven
+	// build
 	/**
-	 * Version of this library that will be used as part of the default user agent string or as part of a custom user
-	 * agent string.
+	 * Version of this library that will be used as part of the default user agent string
+	 * or as part of a custom user agent string.
 	 *
 	 * @see DefaultWebServiceWs2#createUserAgent()
 	 * @see DefaultWebServiceWs2#createUserAgent(String, String, String)
@@ -58,7 +59,8 @@ public abstract class DefaultWebServiceWs2 extends DomainsWs2 implements WebServ
 	protected static final String USER_AGENT_LIB_VERSION = "2.01beta-nusicEdition";
 
 	/**
-	 * Contact information of this library that will be used as part of the default user agent string.
+	 * Contact information of this library that will be used as part of the default user
+	 * agent string.
 	 *
 	 * @see DefaultWebServiceWs2#createUserAgent()
 	 * @see DefaultWebServiceWs2#createUserAgent(String, String, String)
@@ -110,12 +112,14 @@ public abstract class DefaultWebServiceWs2 extends DomainsWs2 implements WebServ
 	private MbXmlWriter writer;
 
 	/*
-	 * All POST requests require authentication. You should authenticate using HTTP Digest, use the same username and
-	 * password you use to access the main http://musicbrainz.org website. The realm is "musicbrainz.org".
-	 * 
-	 * POST requests should always include a 'client' parameter in the URL (not the body). The value of 'client' should
-	 * be the ID of the client software submitting data. This has to be the application's name and version number, not
-	 * that of a client library (client libraries should use HTTP's User-Agent header). The recommended format is
+	 * All POST requests require authentication. You should authenticate using HTTP
+	 * Digest, use the same username and password you use to access the main
+	 * http://musicbrainz.org website. The realm is "musicbrainz.org".
+	 *
+	 * POST requests should always include a 'client' parameter in the URL (not the body).
+	 * The value of 'client' should be the ID of the client software submitting data. This
+	 * has to be the application's name and version number, not that of a client library
+	 * (client libraries should use HTTP's User-Agent header). The recommended format is
 	 * "application-version", where version does not contain a - character.
 	 */
 	/**
@@ -153,7 +157,6 @@ public abstract class DefaultWebServiceWs2 extends DomainsWs2 implements WebServ
 
 	/**
 	 * Sends a GET request to the specified url
-	 * 
 	 * @param url The URL
 	 * @return A populated {@link Metadata} object
 	 * @throws WebServiceException
@@ -162,7 +165,6 @@ public abstract class DefaultWebServiceWs2 extends DomainsWs2 implements WebServ
 
 	/**
 	 * Sends a POST request to the specified url.
-	 * 
 	 * @param url
 	 * @param md
 	 * @return {@link Metadata}
@@ -173,7 +175,6 @@ public abstract class DefaultWebServiceWs2 extends DomainsWs2 implements WebServ
 
 	/**
 	 * Sends a PUT request to the specified url.
-	 * 
 	 * @param url
 	 * @return {@link Metadata}
 	 * @throws WebServiceException
@@ -183,7 +184,6 @@ public abstract class DefaultWebServiceWs2 extends DomainsWs2 implements WebServ
 
 	/**
 	 * Sends a DELETE request to the specified url.
-	 * 
 	 * @param url
 	 * @return {@link Metadata}
 	 * @throws WebServiceException
@@ -222,9 +222,8 @@ public abstract class DefaultWebServiceWs2 extends DomainsWs2 implements WebServ
 	}
 
 	/**
-	 * Constructs a URL that can be used to query the web service. The url is made up of the protocol, host, port,
-	 * version, type, path and parameters.
-	 * 
+	 * Constructs a URL that can be used to query the web service. The url is made up of
+	 * the protocol, host, port, version, type, path and parameters.
 	 * @param submissionType
 	 * @param client
 	 * @return An URL as String
@@ -269,14 +268,12 @@ public abstract class DefaultWebServiceWs2 extends DomainsWs2 implements WebServ
 	}
 
 	/**
-	 * Constructs a URL that can be used to query the web service. The url is made up of the protocol, host, port,
-	 * version, type, path and parameters.
-	 * 
+	 * Constructs a URL that can be used to query the web service. The url is made up of
+	 * the protocol, host, port, version, type, path and parameters.
 	 * @param entity The entity (i.e. type, e.g. 'artist') the request is targeting
 	 * @param id The id of the entity
 	 * @param includeParams A list containing values for the 'inc' parameter (can be null)
 	 * @param filterParams Additional parameters depending on the entity (can be null)
-	 * 
 	 * @return An URL as String
 	 */
 	protected String makeURL(String entity, String id, List<String> includeParams, Map<String, String> filterParams) {
@@ -334,8 +331,8 @@ public abstract class DefaultWebServiceWs2 extends DomainsWs2 implements WebServ
 	 * @return the parser
 	 *
 	 * <code>&lt;name&gt;</code>/<code>&lt;version&gt;</code>
-	 * {@link #USER_AGENT_LIB_NAME}/{@link #USER_AGENT_LIB_VERSION} ( <code>&lt;contact&gt;</code> )
-	 * 
+	 * {@link #USER_AGENT_LIB_NAME}/{@link #USER_AGENT_LIB_VERSION} (
+	 * <code>&lt;contact&gt;</code> )
 	 * @param name custom application name
 	 * @param version custom application version
 	 * @param contact application contact URL or author email

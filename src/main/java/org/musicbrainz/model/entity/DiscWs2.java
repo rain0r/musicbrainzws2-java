@@ -12,18 +12,20 @@ import org.musicbrainz.model.entity.listelement.ReleaseListWs2;
  * <p>
  * Represents an Audio CD.
  * </p>
- * 
+ *
  * <p>
- * This class represents an Audio CD. A disc can have an ID (the MusicBrainz DiscID), which is calculated from the CD's
- * table of contents (TOC). There may also be data from the TOC like the length of the disc in sectors, as well as
- * position and length of the tracks.
+ * This class represents an Audio CD. A disc can have an ID (the MusicBrainz DiscID),
+ * which is calculated from the CD's table of contents (TOC). There may also be data from
+ * the TOC like the length of the disc in sectors, as well as position and length of the
+ * tracks.
  * </p>
- * 
+ *
  * <p>
- * Note that different TOCs, maybe due to different pressings, lead to different DiscIDs. Conversely, if two different
- * discs have the same TOC, they also have the same DiscID (which is unlikely but not impossible). DiscIDs are always 28
- * characters long and look like this: <code>J68I_CDcUFdCRCIbHSEbTBCbooA-</code>. Sometimes they are also referred to as
- * CDIndex IDs.
+ * Note that different TOCs, maybe due to different pressings, lead to different DiscIDs.
+ * Conversely, if two different discs have the same TOC, they also have the same DiscID
+ * (which is unlikely but not impossible). DiscIDs are always 28 characters long and look
+ * like this: <code>J68I_CDcUFdCRCIbHSEbTBCbooA-</code>. Sometimes they are also referred
+ * to as CDIndex IDs.
  * </p>
  */
 public class DiscWs2 extends EntityWs2 {
@@ -139,11 +141,11 @@ public class DiscWs2 extends EntityWs2 {
 	 * </p>
 	 *
 	 * <p>
-	 * This method returns a list of Disc.Tracks containing the track offset and length in sectors for all tracks on
-	 * this disc. The track offset is measured from the beginning of the disc, the length is relative to the track's
-	 * offset. Note that the leadout track is <em>not</em> included.
+	 * This method returns a list of Disc.Tracks containing the track offset and length in
+	 * sectors for all tracks on this disc. The track offset is measured from the
+	 * beginning of the disc, the length is relative to the track's offset. Note that the
+	 * leadout track is <em>not</em> included.
 	 * </p>
-	 * 
 	 * @return a list of Disc.Tracks that contain offset and length as Integers
 	 */
 	public List<DiscTrackWs2> getTracks() {
@@ -167,10 +169,9 @@ public class DiscWs2 extends EntityWs2 {
 	 * </p>
 	 *
 	 * <p>
-	 * This method adds a Track (which contains offset, length) to the list of tracks. The leadout track must
-	 * <em>not</em> be added. The total length of the disc can be set.
+	 * This method adds a Track (which contains offset, length) to the list of tracks. The
+	 * leadout track must <em>not</em> be added. The total length of the disc can be set.
 	 * </p>
-	 * 
 	 * @param track a Disc.Track that contains offset and length as Integers
 	 */
 	public void addTrack(DiscTrackWs2 track) {
@@ -229,7 +230,6 @@ public class DiscWs2 extends EntityWs2 {
 
 	/**
 	 * Gets the underlying <code>List</clode> of releases.
-	 * 
 	 * @return the releases
 	 */
 	public List<ReleaseWs2> getReleases() {
@@ -238,9 +238,8 @@ public class DiscWs2 extends EntityWs2 {
 
 	/**
 	 * Sets the underlying <code>List</clode> of releases.
-	 * 
+	 *
 	 * Note: This will implicitly create a new {@link #releaseList} if it is null.
-	 * 
 	 * @param releases the releases to set
 	 */
 	public void setReleases(List<ReleaseWs2> releases) {
@@ -271,11 +270,11 @@ public class DiscWs2 extends EntityWs2 {
 	 * <p>
 	 * Adds a release to the underlying <code>List</clode> of releases.
 	 * </p>
-	 * 
+	 *
 	 * <p>
-	 * <em>Note: This will implicitly create a new {@link #releaseList} if it is null.</em>
+	 * <em>Note: This will implicitly create a new {@link #releaseList} if it is
+	 * null.</em>
 	 * </p>
-	 * 
 	 * @param release The {@link ReleaseWs2} to add.
 	 */
 	public void addRelease(ReleaseWs2 release) {
@@ -305,4 +304,5 @@ public class DiscWs2 extends EntityWs2 {
 
 		return true;
 	}
+
 }

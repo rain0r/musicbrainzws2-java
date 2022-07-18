@@ -16,9 +16,10 @@ import org.musicbrainz.wsxml.element.ListElement;
  * <p>
  * A List of Media (Medium) referred by a release
  * </p>
- * 
+ *
  */
 public class MediumListWs2 extends ListElement {
+
 	private static Logger log = Logger.getLogger(MediumListWs2.class.getName());
 
 	private int tracksCount;

@@ -20,16 +20,18 @@ import org.musicbrainz.webservice.WebService;
  * <p>
  * A first-level MusicBrainz class.
  * </p>
- * 
+ *
  * <p>
- * All entities in MusicBrainz have unique IDs (which are absolute URIs) and may have any number of {@link RelationWs2}s
- * to other entities. This class is abstract and should not be instantiated.
+ * All entities in MusicBrainz have unique IDs (which are absolute URIs) and may have any
+ * number of {@link RelationWs2}s to other entities. This class is abstract and should not
+ * be instantiated.
  * </p>
- * 
+ *
  * <p>
- * Relations are differentiated by their target type, that means, where they link to. MusicBrainz currently supports
- * four target types (artists, releases, tracks, and URLs) each identified using a URI. To get all relations with a
- * specific target type, you can use {@link EntityWs2#getRelations(String, String, List, String)} and pass one of the
+ * Relations are differentiated by their target type, that means, where they link to.
+ * MusicBrainz currently supports four target types (artists, releases, tracks, and URLs)
+ * each identified using a URI. To get all relations with a specific target type, you can
+ * use {@link EntityWs2#getRelations(String, String, List, String)} and pass one of the
  * following constants as the parameter:
  * </p>
  * <ul>
@@ -41,7 +43,7 @@ import org.musicbrainz.webservice.WebService;
  * <li>{@link RelationWs2#TO_WORK}</li>
  * <li>{@link RelationWs2#TO_URL}</li>
  * </ul>
- * 
+ *
  * @see RelationWs2
  */
 
@@ -89,13 +91,14 @@ public abstract class EntityWs2 extends DomainsWs2 {
 	private RatingsWs2 rating;
 
 	/**
-	 * The list of tags postet by the user for this entity (not for releases at present time). Must be logged in to ask
-	 * for.
+	 * The list of tags postet by the user for this entity (not for releases at present
+	 * time). Must be logged in to ask for.
 	 */
 	private List<TagWs2> userTags = new ArrayList<TagWs2>();
 
 	/**
-	 * The rating the user give to this entity (not for releases at present time). Must be logged in to ask for.
+	 * The rating the user give to this entity (not for releases at present time). Must be
+	 * logged in to ask for.
 	 */
 	private RatingsWs2 userRating;
 
@@ -190,18 +193,20 @@ public abstract class EntityWs2 extends DomainsWs2 {
 
 	/**
 	 * Returns a list of relations.
-	 * 
-	 * You may use the <code>relationType</code> parameter to further restrict the selection. If it is set, only
-	 * relations with the given relation type are returned. The <code>requiredAttributes</code> sequence lists
-	 * attributes that have to be part of all returned relations.
-	 * 
-	 * If <code>direction</code> is set, only relations with the given reading direction are returned. You can use the
-	 * {@link RelationWs2#DIR_FORWARD}, {@link RelationWs2#DIR_BACKWARD}, and {@link RelationWs2#DIR_BOTH} constants for
+	 *
+	 * You may use the <code>relationType</code> parameter to further restrict the
+	 * selection. If it is set, only relations with the given relation type are returned.
+	 * The <code>requiredAttributes</code> sequence lists attributes that have to be part
+	 * of all returned relations.
+	 *
+	 * If <code>direction</code> is set, only relations with the given reading direction
+	 * are returned. You can use the {@link RelationWs2#DIR_FORWARD},
+	 * {@link RelationWs2#DIR_BACKWARD}, and {@link RelationWs2#DIR_BOTH} constants for
 	 * this.
-	 * 
 	 * @param targetType The target relation type (can be null)
 	 * @param relationType The relation type (can be null)
-	 * @param requiredAttributes Attributes that are required for every relation (can be null)
+	 * @param requiredAttributes Attributes that are required for every relation (can be
+	 * null)
 	 * @param direction The direction of the relation (can be null)
 	 * @return A list of relations
 	 */

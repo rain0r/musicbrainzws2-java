@@ -87,4 +87,5 @@ public class ReleaseGroupSearchWs2 extends SearchWs2 {
 		}
 		return le;
 	}
+
 }

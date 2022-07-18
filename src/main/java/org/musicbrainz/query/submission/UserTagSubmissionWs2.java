@@ -6,7 +6,7 @@ import org.musicbrainz.webservice.WebService;
 
 /**
  * List of Tags to be submitted to the Web Service.
- * 
+ *
  **/
 public class UserTagSubmissionWs2 extends SubmissionWs2 {
 

@@ -7,9 +7,10 @@ import org.musicbrainz.model.entity.listelement.DiscListWs2;
 /**
  * <p>
  * A single Medium and relative TrackList.
- * 
+ *
  */
 public class MediumWs2 {
+
 	private static Logger log = Logger.getLogger(MediumWs2.class.getName());
 
 	private int position;
@@ -158,4 +159,5 @@ public class MediumWs2 {
 
 		return getTrackList().getDuration();
 	}
+
 }

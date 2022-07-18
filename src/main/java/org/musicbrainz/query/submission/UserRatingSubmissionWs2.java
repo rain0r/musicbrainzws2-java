@@ -6,7 +6,7 @@ import org.musicbrainz.webservice.WebService;
 
 /**
  * List of Ratings to be submitted to the Web Service.
- * 
+ *
  **/
 public class UserRatingSubmissionWs2 extends SubmissionWs2 {
 

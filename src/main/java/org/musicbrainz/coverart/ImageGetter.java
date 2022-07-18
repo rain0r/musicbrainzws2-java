@@ -14,7 +14,6 @@ import fm.last.musicbrainz.coverart.CoverArtImage;
 import fm.last.musicbrainz.coverart.impl.DefaultCoverArtArchiveClient;
 
 /**
- *
  * @author marco
  */
 public class ImageGetter {
@@ -53,4 +52,5 @@ public class ImageGetter {
 		}
 		return ImageList;
 	}
+
 }

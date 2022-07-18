@@ -32,7 +32,7 @@ public class ReleaseIncludesWs2 extends IncludesWs2 {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.musicbrainz.webservice.Includes#createIncludeTags()
 	 */
 	@Override
@@ -174,4 +174,5 @@ public class ReleaseIncludesWs2 extends IncludesWs2 {
 		target.setDiscids(isDiscids());
 		return target;
 	}
+
 }

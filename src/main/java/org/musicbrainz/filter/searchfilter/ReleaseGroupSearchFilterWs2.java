@@ -6,13 +6,15 @@ import java.util.Map;
  * <p>
  * A filter for the release group collection.
  * </p>
- * 
+ *
  * <p>
- * <em>Note that these filter properties properties and <code>query</code> may not be used together.</em>
+ * <em>Note that these filter properties properties and <code>query</code> may not be used
+ * together.</em>
  * </p>
- * 
+ *
  */
 public class ReleaseGroupSearchFilterWs2 extends SearchFilterWs2 {
+
 	/**
 	 * A String containing the release's title
 	 */

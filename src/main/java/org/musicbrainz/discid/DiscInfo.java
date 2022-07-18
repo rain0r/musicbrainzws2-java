@@ -62,14 +62,17 @@ public class DiscInfo {
 
 			return CalendarUtils.calcDurationString(millis);
 		}
+
 	}
 
 	/** MusicBrainz DiscId for the cd */
 	public final String discid;
 
 	/**
-	 * FreeDB id for the cd FreeDB: <a href="http://www.freedb.org/">http://www.freedb.org/</a><br/>
-	 * BeNOW FreeDB Project: <a href="http://benow.ca/projects">http://benow.ca/projects</a>
+	 * FreeDB id for the cd FreeDB:
+	 * <a href="http://www.freedb.org/">http://www.freedb.org/</a><br/>
+	 * BeNOW FreeDB Project:
+	 * <a href="http://benow.ca/projects">http://benow.ca/projects</a>
 	 */
 	public final String freeDBid;
 
@@ -158,4 +161,5 @@ public class DiscInfo {
 	public static DiscInfo fromOffsets(int[] offsets) throws DiscIdException {
 		return fromOffsets(1, offsets.length - 1, offsets);
 	}
+
 }

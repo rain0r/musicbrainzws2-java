@@ -10,9 +10,10 @@ import org.musicbrainz.wsxml.element.ListElement;
  * <p>
  * A List of Label Info (Label & catalog number)referred by a release
  * </p>
- * 
+ *
  */
 public class LabelInfoListWs2 extends ListElement {
+
 	private static Logger log = Logger.getLogger(LabelInfoListWs2.class.getName());
 
 	/**
@@ -54,7 +55,7 @@ public class LabelInfoListWs2 extends ListElement {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#toString()
 	 */
 	@Override

@@ -59,4 +59,5 @@ public class AnnotationSearchbyEntityId {
 	public boolean hasMore() {
 		return q.hasMore();
 	}
+
 }

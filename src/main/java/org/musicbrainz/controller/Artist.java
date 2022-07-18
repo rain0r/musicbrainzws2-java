@@ -1,6 +1,6 @@
 /*
  * A controller for the Artist Entity.
- * 
+ *
  */
 package org.musicbrainz.controller;
 
@@ -733,7 +733,8 @@ public class Artist extends Controller {
 		if (artistinc == null)
 			return inc;
 
-		// if (artistinc.isRecordingLevelRelations()) inc.setRecordingLevelRelations(true);
+		// if (artistinc.isRecordingLevelRelations())
+		// inc.setRecordingLevelRelations(true);
 		// if (artistinc.isWorkLevelRelations()) inc.setWorkLevelRelations(true);
 
 		return inc;
@@ -763,7 +764,8 @@ public class Artist extends Controller {
 
 		if (artistinc.isDiscids())
 			inc.setDiscids(true);
-		// if (artistinc.isRecordingLevelRelations()) inc.setRecordingLevelRelations(true);
+		// if (artistinc.isRecordingLevelRelations())
+		// inc.setRecordingLevelRelations(true);
 		// if (artistinc.isWorkLevelRelations()) inc.setWorkLevelRelations(true);
 
 		return inc;
@@ -793,7 +795,8 @@ public class Artist extends Controller {
 
 		if (artistinc.isDiscids())
 			inc.setDiscids(true);
-		// if (artistinc.isRecordingLevelRelations()) inc.setRecordingLevelRelations(true);
+		// if (artistinc.isRecordingLevelRelations())
+		// inc.setRecordingLevelRelations(true);
 		// if (artistinc.isWorkLevelRelations()) inc.setWorkLevelRelations(true);
 
 		return inc;
@@ -821,7 +824,8 @@ public class Artist extends Controller {
 		if (artistinc == null)
 			return inc;
 
-		// if (artistinc.isRecordingLevelRelations()) inc.setRecordingLevelRelations(true);
+		// if (artistinc.isRecordingLevelRelations())
+		// inc.setRecordingLevelRelations(true);
 		// if (artistinc.isWorkLevelRelations()) inc.setWorkLevelRelations(true);
 
 		return inc;
@@ -843,7 +847,8 @@ public class Artist extends Controller {
 		if (artistinc == null)
 			return inc;
 
-		// if (artistinc.isRecordingLevelRelations()) inc.setRecordingLevelRelations(true);
+		// if (artistinc.isRecordingLevelRelations())
+		// inc.setRecordingLevelRelations(true);
 		// if (artistinc.isWorkLevelRelations()) inc.setWorkLevelRelations(true);
 
 		return inc;
@@ -1057,4 +1062,5 @@ public class Artist extends Controller {
 	public void setReleaseVABrowseFilter(ReleaseBrowseFilterWs2 releaseVABrowseFilter) {
 		this.releaseVABrowseFilter = releaseVABrowseFilter;
 	}
+
 }

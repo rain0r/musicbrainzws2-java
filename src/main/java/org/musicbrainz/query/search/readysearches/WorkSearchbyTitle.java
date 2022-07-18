@@ -45,4 +45,5 @@ public class WorkSearchbyTitle {
 	public boolean hasMore() {
 		return q.hasMore();
 	}
+
 }

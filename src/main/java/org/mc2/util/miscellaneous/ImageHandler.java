@@ -11,7 +11,7 @@ import java.io.InputStream;
 import javax.imageio.ImageIO;
 
 /**
- * 
+ *
  */
 public class ImageHandler {
 
@@ -149,4 +149,5 @@ public class ImageHandler {
 
 		ImageIO.write(image, format, file);
 	}
+
 }

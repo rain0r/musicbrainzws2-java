@@ -4,7 +4,7 @@ import org.musicbrainz.model.entity.EntityWs2;
 
 /*
 * <p>Annotation Text for any Entity </p>
-* 
+*
 */
 public class AnnotationWs2 extends EntityWs2 {
 

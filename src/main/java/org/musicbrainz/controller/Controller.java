@@ -61,9 +61,8 @@ public abstract class Controller extends DomainsWs2 {
 
 	/**
 	 * Creates a Controller with a custom user agent string.
-	 * 
-	 * @param applicationName custom application name used in user agent string. If <code>null</code>, the default user
-	 * agent string is used
+	 * @param applicationName custom application name used in user agent string. If
+	 * <code>null</code>, the default user agent string is used
 	 * @param applicationVersion custom application version used in user agent string
 	 * @param applicationContact contact URL or author email used in user agent string
 	 */
@@ -278,10 +277,12 @@ public abstract class Controller extends DomainsWs2 {
 			entity.getRelationList().addRelation(rel);
 
 			/*
-			 * MB don't accept Artist Credits requests for works at the moment,so we have to complete the relations.
-			 * 
-			 * Time consuming, but no other way. To avoid it, set getIncludes().setArtistCredits(false) when asking for
-			 * relations involving a Work.
+			 * MB don't accept Artist Credits requests for works at the moment,so we have
+			 * to complete the relations.
+			 *
+			 * Time consuming, but no other way. To avoid it, set
+			 * getIncludes().setArtistCredits(false) when asking for relations involving a
+			 * Work.
 			 */
 
 			if (!getIncludes().isArtistCredits())
@@ -461,12 +462,10 @@ public abstract class Controller extends DomainsWs2 {
 
 	/**
 	 * Creates an instance of the web service implementation.
-	 * 
-	 * @param userAgentName custom application name used in user agent string. If <code>null</code>, the default user
-	 * agent string is used.
+	 * @param userAgentName custom application name used in user agent string. If
+	 * <code>null</code>, the default user agent string is used.
 	 * @param userAgentVersion custom application version used in user agent string
 	 * @param userAgentContact contact URL or author email used in user agent string
-	 * 
 	 * @return a new instance of the web service implementation.
 	 */
 	private WebService createWebService(String userAgentName, String userAgentVersion, String userAgentContact) {
@@ -539,4 +538,5 @@ public abstract class Controller extends DomainsWs2 {
 	public void setIncoming(EntityWs2 incoming) {
 		this.incoming = incoming;
 	}
+
 }

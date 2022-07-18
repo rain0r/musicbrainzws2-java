@@ -1,6 +1,6 @@
 /*
  * A controller for the Collection Entity.
- * 
+ *
  */
 package org.musicbrainz.controller;
 
@@ -265,4 +265,5 @@ public class Collection extends Controller {
 		getIncluded().setReleases(false);
 		// You could also test the metadata.message if is OK or throw an exception
 	}
+
 }

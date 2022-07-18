@@ -8,9 +8,10 @@ import java.util.logging.Logger;
 /**
  * <p>
  * A single Medium and relative TrackList.
- * 
+ *
  */
 public class ReleaseEventWs2 {
+
 	private static Logger log = Logger.getLogger(ReleaseEventWs2.class.getName());
 
 	/**

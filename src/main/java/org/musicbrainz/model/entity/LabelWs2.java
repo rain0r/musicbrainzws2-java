@@ -43,17 +43,18 @@ public class LabelWs2 extends EntityWs2 {
 	private String name;
 
 	/**
-	 * The sort name is the label's name in a special format which is better suited for lexicographic sorting. The
-	 * MusicBrainz style guide specifies this format.
+	 * The sort name is the label's name in a special format which is better suited for
+	 * lexicographic sorting. The MusicBrainz style guide specifies this format.
 	 */
 	private String sortName;
 
 	private LifeSpanWs2 lifespan;
 
 	/**
-	 * The disambiguation attribute may be used if there is more than one label with the same name. In this case,
-	 * disambiguation attributes are added to the label names to keep them apart.
-	 * 
+	 * The disambiguation attribute may be used if there is more than one label with the
+	 * same name. In this case, disambiguation attributes are added to the label names to
+	 * keep them apart.
+	 *
 	 */
 	private String disambiguation;
 
@@ -209,7 +210,6 @@ public class LabelWs2 extends EntityWs2 {
 
 	/**
 	 * Gets the underlying <code>List</clode> of releases.
-	 * 
 	 * @return the releases
 	 */
 	public List<ReleaseWs2> getReleases() {
@@ -218,9 +218,8 @@ public class LabelWs2 extends EntityWs2 {
 
 	/**
 	 * Sets the underlying <code>List</clode> of releases.
-	 * 
+	 *
 	 * Note: This will implicitly create a new {@link #releaseList} if it is null.
-	 * 
 	 * @param releases the releases to set
 	 */
 	public void setReleases(List<ReleaseWs2> releases) {
@@ -249,11 +248,11 @@ public class LabelWs2 extends EntityWs2 {
 	 * <p>
 	 * Adds a release to the underlying <code>List</clode> of releases.
 	 * </p>
-	 * 
+	 *
 	 * <p>
-	 * <em>Note: This will implicitly create a new {@link #releaseList} if it is null.</em>
+	 * <em>Note: This will implicitly create a new {@link #releaseList} if it is
+	 * null.</em>
 	 * </p>
-	 * 
 	 * @param release The {@link ReleaseWs2} to add.
 	 */
 	public void addRelease(ReleaseWs2 release) {
@@ -265,15 +264,15 @@ public class LabelWs2 extends EntityWs2 {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#toString()
 	 */
 
 	/**
 	 * Returns a unique label name using disambiguation (if available).
-	 * 
-	 * This method returns the label name together with the disambiguation attribute in parenthesis if it exists.
-	 * Example: 'Vixen (Hip-hop)'.
+	 *
+	 * This method returns the label name together with the disambiguation attribute in
+	 * parenthesis if it exists. Example: 'Vixen (Hip-hop)'.
 	 */
 	public String getUniqueName() {
 		if (StringUtils.isNotBlank(disambiguation)) {
@@ -299,4 +298,5 @@ public class LabelWs2 extends EntityWs2 {
 
 		return false;
 	}
+
 }

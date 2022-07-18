@@ -5,6 +5,7 @@ import java.util.Map;
 import org.musicbrainz.filter.ReleaseTypeFilterWs2;
 
 public class ReleaseGroupBrowseFilterWs2 extends BrowseFilterWs2 {
+
 	private ReleaseTypeFilterWs2 releaseTypeFilter = new ReleaseTypeFilterWs2();
 
 	public ReleaseGroupBrowseFilterWs2() {

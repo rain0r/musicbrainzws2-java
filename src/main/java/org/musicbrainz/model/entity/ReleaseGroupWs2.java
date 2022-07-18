@@ -17,7 +17,7 @@ import org.musicbrainz.model.entity.listelement.ReleaseListWs2;
  * <p>
  * Represents a release group.
  * </p>
- * 
+ *
  */
 public class ReleaseGroupWs2 extends EntityWs2 {
 
@@ -124,7 +124,8 @@ public class ReleaseGroupWs2 extends EntityWs2 {
 	}
 
 	/**
-	 * @return a string containing the prymary AND the secondary types, no matter what type is.
+	 * @return a string containing the prymary AND the secondary types, no matter what
+	 * type is.
 	 */
 	public String getDisplayType() {
 
@@ -237,7 +238,6 @@ public class ReleaseGroupWs2 extends EntityWs2 {
 
 	/**
 	 * Gets the underlying <code>List</clode> of releases.
-	 * 
 	 * @return the releases
 	 */
 	public List<ReleaseWs2> getReleases() {
@@ -292,23 +292,25 @@ public class ReleaseGroupWs2 extends EntityWs2 {
 
 	/*
 	 * // Older method to retrieve the first release.
-	 * 
+	 *
 	 * private ReleaseWs2 getEarliestRelease() {
-	 * 
+	 *
 	 * if ( getReleaseList() == null || getReleaseList().getReleases() == null ||
 	 * getReleaseList().getReleases().isEmpty())
-	 * 
+	 *
 	 * return null;
-	 * 
+	 *
 	 * List<ReleaseWs2> sorted = new ArrayList<ReleaseWs2>();
-	 * 
-	 * for (ReleaseWs2 rel : getReleaseList().getReleases()) { if (rel.getDate()!=null) { sorted.add(rel); } }
-	 * 
+	 *
+	 * for (ReleaseWs2 rel : getReleaseList().getReleases()) { if (rel.getDate()!=null) {
+	 * sorted.add(rel); } }
+	 *
 	 * if (sorted.isEmpty()) return null;
-	 * 
-	 * Collections.sort(sorted, new Comparator<ReleaseWs2>() { public int compare(ReleaseWs2 o1, ReleaseWs2 o2) { return
+	 *
+	 * Collections.sort(sorted, new Comparator<ReleaseWs2>() { public int
+	 * compare(ReleaseWs2 o1, ReleaseWs2 o2) { return
 	 * o1.getDate().compareTo(o2.getDate()); } } );
-	 * 
+	 *
 	 * return sorted.get(0); }
 	 */
 	@Override

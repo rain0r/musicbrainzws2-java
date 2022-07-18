@@ -6,20 +6,21 @@ import java.util.List;
 import org.musicbrainz.DomainsWs2;
 
 /**
- * Each Submission could contain requests for entities by different Entity Types. A EntityTypeElementList is the sub
- * list for a specific entity Type.
- * 
+ * Each Submission could contain requests for entities by different Entity Types. A
+ * EntityTypeElementList is the sub list for a specific entity Type.
+ *
  **/
 public class EntityTypeElementList extends DomainsWs2 {
 
 	/*
-	 * The entity (list) type. Must be one of LABELLIST ARTISTLIST RELEASEGROUPLIST WORKLIST RECORDINGLIST
+	 * The entity (list) type. Must be one of LABELLIST ARTISTLIST RELEASEGROUPLIST
+	 * WORKLIST RECORDINGLIST
 	 */
 	private String entityListType;
 
 	/*
 	 * The List of Entity Elements.
-	 * 
+	 *
 	 */
 	private List<EntityElement> entityElementList = new ArrayList<EntityElement>();
 
@@ -85,4 +86,5 @@ public class EntityTypeElementList extends DomainsWs2 {
 			return true;
 		return false;
 	}
+
 }

@@ -6,7 +6,7 @@ package org.musicbrainz.webservice;
 public class ResponseException extends WebServiceException {
 
 	/**
-	 * 
+	 *
 	 */
 	public ResponseException() {
 		// TODO Auto-generated constructor stub

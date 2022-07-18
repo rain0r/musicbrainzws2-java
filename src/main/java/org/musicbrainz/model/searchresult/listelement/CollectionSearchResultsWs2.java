@@ -15,9 +15,9 @@ public class CollectionSearchResultsWs2 extends ListElement {
 
 	/**
 	 * Convenience method to adds an {@link CollectionResultWs2} to the list.
-	 * 
-	 * This will create a new <code>ArrayList</code> if {@link #collectionResults} is null.
-	 * 
+	 *
+	 * This will create a new <code>ArrayList</code> if {@link #collectionResults} is
+	 * null.
 	 * @param collectionResult The collection result to add
 	 */
 	public void addCollectionResult(CollectionResultWs2 collectionResult) {
@@ -42,4 +42,5 @@ public class CollectionSearchResultsWs2 extends ListElement {
 	public CollectionListWs2 getCollectionList() {
 		return collectionList;
 	}
+
 }

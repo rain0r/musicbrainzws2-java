@@ -42,4 +42,5 @@ public class WorkListWs2 extends ListElement {
 
 		works.addAll(WorkList);
 	}
+
 }

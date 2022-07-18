@@ -37,14 +37,16 @@ public class CollectionReleasesHandlerWs2 extends QueryWs2 {
 		for (String rel : releases) {
 			if (max > 25) {
 				md = super.putToWebService(COLLECTION, collection.getId(), toAdd);
-				// Logger.getLogger(Collection.class.getName()).log(Level.INFO, md.getMessage(), md.getMessage());
+				// Logger.getLogger(Collection.class.getName()).log(Level.INFO,
+				// md.getMessage(), md.getMessage());
 				toAdd.clear();
 			}
 			toAdd.add(rel);
 		}
 		if (!toAdd.isEmpty()) {
 			md = super.putToWebService(COLLECTION, collection.getId(), toAdd);
-			// Logger.getLogger(Collection.class.getName()).log(Level.INFO, md.getMessage(), md.getMessage());
+			// Logger.getLogger(Collection.class.getName()).log(Level.INFO,
+			// md.getMessage(), md.getMessage());
 		}
 		return md;
 	}
@@ -58,15 +60,18 @@ public class CollectionReleasesHandlerWs2 extends QueryWs2 {
 		for (String rel : releases) {
 			if (max > 25) {
 				md = super.deleteFromWebService(COLLECTION, collection.getId(), toDelete);
-				// Logger.getLogger(Collection.class.getName()).log(Level.INFO, md.getMessage(), md.getMessage());
+				// Logger.getLogger(Collection.class.getName()).log(Level.INFO,
+				// md.getMessage(), md.getMessage());
 				toDelete.clear();
 			}
 			toDelete.add(rel);
 		}
 		if (!toDelete.isEmpty()) {
 			md = super.deleteFromWebService(COLLECTION, collection.getId(), toDelete);
-			// Logger.getLogger(Collection.class.getName()).log(Level.INFO, md.getMessage(), md.getMessage());
+			// Logger.getLogger(Collection.class.getName()).log(Level.INFO,
+			// md.getMessage(), md.getMessage());
 		}
 		return md;
 	}
+
 }

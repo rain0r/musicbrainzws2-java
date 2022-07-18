@@ -45,4 +45,5 @@ public class ReleaseGroupSearchbyTitle {
 	public boolean hasMore() {
 		return q.hasMore();
 	}
+
 }

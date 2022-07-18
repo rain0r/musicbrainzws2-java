@@ -1,6 +1,6 @@
 /*
  * A controller for the Work Entity.
- * 
+ *
  */
 package org.musicbrainz.controller;
 
@@ -22,7 +22,7 @@ public class Work extends Controller {
 		setIncluded(new WorkIncludesWs2());
 	}
 
-// -------------- Search  -------------------------------------------------//
+	// -------------- Search -------------------------------------------------//
 
 	@Override
 	public WorkSearchFilterWs2 getSearchFilter() {

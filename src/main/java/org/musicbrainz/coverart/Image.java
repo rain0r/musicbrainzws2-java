@@ -20,7 +20,6 @@ import fm.last.musicbrainz.coverart.CoverArtImage;
 import fm.last.musicbrainz.coverart.CoverArtType;
 
 /**
- *
  * @author marco
  */
 public class Image {
@@ -172,4 +171,5 @@ public class Image {
 		}
 		return largeThumbnail;
 	}
+
 }

@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 /**
  * This class contains helper functions to make common tasks easier.
- * 
+ *
  * @author Patrick Ruhkopf
  */
 public class MbUtils {
@@ -15,7 +15,6 @@ public class MbUtils {
 	/**
 	 * Converts a space separated list of relative types to absolute URIs, see
 	 * {@link MbUtils#convertTypeToURI(String, String)}
-	 * 
 	 * @param typeStr A space separated lsit of types
 	 * @param namespace The namespace of the URI
 	 * @return An absolute URI string
@@ -39,12 +38,10 @@ public class MbUtils {
 	}
 
 	/**
-	 * This method returns an absolute URI using the given type and namespace. If the type is already an absolute URI,
-	 * it is returned unchanged.
-	 * 
+	 * This method returns an absolute URI using the given type and namespace. If the type
+	 * is already an absolute URI, it is returned unchanged.
 	 * @param type The type
 	 * @param namespace The namespace
-	 * 
 	 * @return An absolute URI
 	 */
 	public static String convertTypeToURI(String type, String namespace) {
@@ -67,11 +64,10 @@ public class MbUtils {
 	}
 
 	/**
-	 * Makes an absolute URI from the relative id. If the given id is already an URI, it will be returned unchanged.
-	 * 
+	 * Makes an absolute URI from the relative id. If the given id is already an URI, it
+	 * will be returned unchanged.
 	 * @param id A relative id
 	 * @param resType For example <em>track</em> (without namespace!)
-	 * 
 	 * @return An absolute URI
 	 */
 	public static String convertIdToURI(String id, String resType) {
@@ -92,18 +88,20 @@ public class MbUtils {
 
 	/**
 	 * Extract the UUID part from a MusicBrainz identifier.
-	 * 
-	 * This function takes a MusicBrainz ID (an absolute URI) as the input and returns the UUID part of the URI, thus
-	 * turning it into a relative URI. If <code>uriStr</code> is null or a relative URI, then it is returned unchanged.
-	 * 
-	 * The <code>resType</code> parameter can be used for error checking. Set it to 'artist', 'release', or 'track' to
-	 * make sure <code>uriStr</code> is a syntactically valid MusicBrainz identifier of the given resource type. If it
-	 * isn't, an <code>IllegalArgumentException</code> exception is raised. This error checking only works if
-	 * <code>uriStr</code> is an absolute URI, of course.
-	 * 
-	 * Example: >>> MBUtils.extractUuid('http://musicbrainz.org/artist/c0b2500e-0cef-4130-869d-732b23ed9df5', 'artist')
-	 * 'c0b2500e-0cef-4130-869d-732b23ed9df5'
-	 * 
+	 *
+	 * This function takes a MusicBrainz ID (an absolute URI) as the input and returns the
+	 * UUID part of the URI, thus turning it into a relative URI. If <code>uriStr</code>
+	 * is null or a relative URI, then it is returned unchanged.
+	 *
+	 * The <code>resType</code> parameter can be used for error checking. Set it to
+	 * 'artist', 'release', or 'track' to make sure <code>uriStr</code> is a syntactically
+	 * valid MusicBrainz identifier of the given resource type. If it isn't, an
+	 * <code>IllegalArgumentException</code> exception is raised. This error checking only
+	 * works if <code>uriStr</code> is an absolute URI, of course.
+	 *
+	 * Example: >>>
+	 * MBUtils.extractUuid('http://musicbrainz.org/artist/c0b2500e-0cef-4130-869d-732b23ed9df5',
+	 * 'artist') 'c0b2500e-0cef-4130-869d-732b23ed9df5'
 	 * @param uriStr A string containing a MusicBrainz ID (an URI), or null
 	 * @param resType A string containing a resource type
 	 * @return A String containing a relative URI or null
@@ -152,10 +150,9 @@ public class MbUtils {
 
 	/**
 	 * This method will extract a type from an URI.
-	 * 
-	 * This is a helper like extractFragment (see python sources) that works just a little different but should suit our
-	 * needs.
-	 * 
+	 *
+	 * This is a helper like extractFragment (see python sources) that works just a little
+	 * different but should suit our needs.
 	 * @param typeUri The URI containing the type (or the type itself)
 	 * @return A type (extracted from the URI or left unchanged)
 	 */
@@ -169,8 +166,6 @@ public class MbUtils {
 
 	/**
 	 * This method will extract a resType from an URI.
-	 * 
-	 * 
 	 * @param idUri The URI containing the Id
 	 * @return A resType (extracted from the URI or left unchanged)
 	 */
@@ -183,4 +178,5 @@ public class MbUtils {
 		else
 			return f[0];
 	}
+
 }

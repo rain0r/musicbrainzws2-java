@@ -6,12 +6,13 @@ import java.util.logging.Logger;
 
 /**
  * <p>
- * A Area definition. Areas are geographic regions or settlements. See Wikidata for details on how areas are added and
- * updated.
- * 
+ * A Area definition. Areas are geographic regions or settlements. See Wikidata for
+ * details on how areas are added and updated.
+ *
  * </p>
  */
 public class AreaWs2 {
+
 	private static Logger log = Logger.getLogger(AreaWs2.class.getName());
 
 	/**

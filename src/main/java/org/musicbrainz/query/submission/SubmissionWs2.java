@@ -14,8 +14,9 @@ import org.musicbrainz.wsxml.MbXMLException;
 import org.musicbrainz.wsxml.element.Metadata;
 
 /**
- * A Submission is a list to be submitted to the web service. This, actualy, can be a list of user tags or user ratings.
- * 
+ * A Submission is a list to be submitted to the web service. This, actualy, can be a list
+ * of user tags or user ratings.
+ *
  **/
 public abstract class SubmissionWs2 extends DomainsWs2 {
 
@@ -68,7 +69,8 @@ public abstract class SubmissionWs2 extends DomainsWs2 {
 	}
 
 	/*
-	 * Set data to be posted. Here sets both tags and rating, specific subclasses only sets appropriate arguments.
+	 * Set data to be posted. Here sets both tags and rating, specific subclasses only
+	 * sets appropriate arguments.
 	 */
 	// tobe Overidden
 	protected EntityElement setData(EntityWs2 entity, String entityType) {
@@ -134,4 +136,5 @@ public abstract class SubmissionWs2 extends DomainsWs2 {
 	public String getSubmissionType() {
 		return submissionType;
 	}
+
 }

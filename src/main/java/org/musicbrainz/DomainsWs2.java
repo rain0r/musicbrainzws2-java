@@ -10,7 +10,7 @@ import org.musicbrainz.model.entity.EntityWs2;
  * <p>
  * The domains for MusicBrainz XML Web Service/Version 2 .
  * </p>
- * 
+ *
  */
 public abstract class DomainsWs2 {
 

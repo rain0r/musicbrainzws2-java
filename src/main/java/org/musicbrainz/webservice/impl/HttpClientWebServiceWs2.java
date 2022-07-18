@@ -44,7 +44,7 @@ import org.musicbrainz.wsxml.element.Metadata;
 
 /**
  * A simple http client using Apache Commons HttpClient.
- * 
+ *
  */
 public class HttpClientWebServiceWs2 extends DefaultWebServiceWs2 {
 
@@ -62,7 +62,6 @@ public class HttpClientWebServiceWs2 extends DefaultWebServiceWs2 {
 
 	/**
 	 * Use this constructor to inject a configured {@link HttpClient}.
-	 * 
 	 * @param applicationName custom application name used in user agent string
 	 * @param applicationVersion custom application version used in user agent string
 	 * @param applicationContact contact URL or author email used in user agent string
@@ -216,61 +215,61 @@ public class HttpClientWebServiceWs2 extends DefaultWebServiceWs2 {
 			int statusCode = response.getStatusLine().getStatusCode();
 
 			switch (statusCode) {
-			case HttpStatus.SC_SERVICE_UNAVAILABLE: {
-				// Maybe the server is too busy, let's try again.
-				log.warning(buildMessage(response, "Service unavaillable"));
-				method.abort();
-				lastHitTime = System.currentTimeMillis();
-				wait(1);
-				return null;
-			}
-			case HttpStatus.SC_BAD_GATEWAY: {
-				// Maybe the server is too busy, let's try again.
-				log.warning(buildMessage(response, "Bad Gateway"));
-				method.abort();
-				lastHitTime = System.currentTimeMillis();
-				wait(1);
-				return null;
-			}
-			case HttpStatus.SC_OK:
-				InputStream instream = response.getEntity().getContent();
-				// Check if content is compressed
-				Header contentEncoding = response.getFirstHeader("Content-Encoding");
-				if (contentEncoding != null && contentEncoding.getValue().equalsIgnoreCase("gzip")) {
-					instream = new GZIPInputStream(instream);
+				case HttpStatus.SC_SERVICE_UNAVAILABLE: {
+					// Maybe the server is too busy, let's try again.
+					log.warning(buildMessage(response, "Service unavaillable"));
+					method.abort();
+					lastHitTime = System.currentTimeMillis();
+					wait(1);
+					return null;
 				}
-				Metadata mtd = getParser().parse(instream);
-				// Closing the input stream will trigger connection release
-				try {
-					instream.close();
+				case HttpStatus.SC_BAD_GATEWAY: {
+					// Maybe the server is too busy, let's try again.
+					log.warning(buildMessage(response, "Bad Gateway"));
+					method.abort();
+					lastHitTime = System.currentTimeMillis();
+					wait(1);
+					return null;
 				}
-				catch (Exception ignore) {
-				}
-				lastHitTime = System.currentTimeMillis();
-				return mtd;
+				case HttpStatus.SC_OK:
+					InputStream instream = response.getEntity().getContent();
+					// Check if content is compressed
+					Header contentEncoding = response.getFirstHeader("Content-Encoding");
+					if (contentEncoding != null && contentEncoding.getValue().equalsIgnoreCase("gzip")) {
+						instream = new GZIPInputStream(instream);
+					}
+					Metadata mtd = getParser().parse(instream);
+					// Closing the input stream will trigger connection release
+					try {
+						instream.close();
+					}
+					catch (Exception ignore) {
+					}
+					lastHitTime = System.currentTimeMillis();
+					return mtd;
 
-			case HttpStatus.SC_NOT_FOUND:
-				throw new ResourceNotFoundException(buildMessage(response, "Not found"));
+				case HttpStatus.SC_NOT_FOUND:
+					throw new ResourceNotFoundException(buildMessage(response, "Not found"));
 
-			case HttpStatus.SC_BAD_REQUEST:
-				throw new RequestException(buildMessage(response, "Bad Request"));
+				case HttpStatus.SC_BAD_REQUEST:
+					throw new RequestException(buildMessage(response, "Bad Request"));
 
-			case HttpStatus.SC_FORBIDDEN:
-				throw new AuthorizationException(buildMessage(response, "Forbidden"));
+				case HttpStatus.SC_FORBIDDEN:
+					throw new AuthorizationException(buildMessage(response, "Forbidden"));
 
-			case HttpStatus.SC_UNAUTHORIZED:
-				throw new AuthorizationException(buildMessage(response, "Unauthorized"));
+				case HttpStatus.SC_UNAUTHORIZED:
+					throw new AuthorizationException(buildMessage(response, "Unauthorized"));
 
 				// This is the actual response code for invalid username o password
-			case HttpStatus.SC_INTERNAL_SERVER_ERROR: {
-				throw new AuthorizationException(buildMessage(response, "Internal server error"));
-			}
-			default: {
+				case HttpStatus.SC_INTERNAL_SERVER_ERROR: {
+					throw new AuthorizationException(buildMessage(response, "Internal server error"));
+				}
+				default: {
 
-				String em = buildMessage(response, "");
-				log.severe("Fatal web service error: " + em);
-				throw new WebServiceException(em);
-			}
+					String em = buildMessage(response, "");
+					log.severe("Fatal web service error: " + em);
+					throw new WebServiceException(em);
+				}
 
 			}
 		}
@@ -326,15 +325,15 @@ public class HttpClientWebServiceWs2 extends DefaultWebServiceWs2 {
 		if (lastHitTime > 0) {
 			do {
 				t1 = System.currentTimeMillis();
-			} while (t1 - lastHitTime < seconds * 1000);
+			}
+			while (t1 - lastHitTime < seconds * 1000);
 		}
 	}
 
 	/**
-	 * method to convert an InputStream to a string using the BufferedReader.readLine() method this methods reads the
-	 * InputStream line by line until the null line is encountered it appends each line to a StringBuilder object for
-	 * optimal performance
-	 * 
+	 * method to convert an InputStream to a string using the BufferedReader.readLine()
+	 * method this methods reads the InputStream line by line until the null line is
+	 * encountered it appends each line to a StringBuilder object for optimal performance
 	 * @param inputStream
 	 * @return String
 	 * @throws IOException
@@ -362,11 +361,11 @@ public class HttpClientWebServiceWs2 extends DefaultWebServiceWs2 {
 	}
 
 	/**
-	 * Ensures that the entity content is fully consumed and the content stream, if exists, is closed.
-	 * 
+	 * Ensures that the entity content is fully consumed and the content stream, if
+	 * exists, is closed.
 	 * @param entity
 	 * @throws IOException if an error occurs reading the input stream
-	 * 
+	 *
 	 */
 	private void consume(final HttpEntity entity) throws IOException {
 		if (entity == null) {
@@ -379,4 +378,5 @@ public class HttpClientWebServiceWs2 extends DefaultWebServiceWs2 {
 			}
 		}
 	}
+
 }

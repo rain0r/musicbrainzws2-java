@@ -80,4 +80,5 @@ public class ReleaseSearchWs2 extends SearchWs2 {
 		}
 		return le;
 	}
+
 }

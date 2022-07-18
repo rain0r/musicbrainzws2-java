@@ -29,9 +29,8 @@ public class ReleaseListWs2 extends ListElement {
 
 	/**
 	 * Adds a release to the list.
-	 * 
+	 *
 	 * It will also create and set new ArrayList if {@link #releases} is null.
-	 * 
 	 * @param release The release to add
 	 */
 	public void addRelease(ReleaseWs2 release) {
@@ -49,4 +48,5 @@ public class ReleaseListWs2 extends ListElement {
 
 		releases.addAll(releaseList);
 	}
+
 }

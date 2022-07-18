@@ -15,9 +15,9 @@ public class ReleaseGroupSearchResultsWs2 extends ListElement {
 
 	/**
 	 * Convenience method to adds an release result to the list.
-	 * 
-	 * This will create a new <code>ArrayList</code> if {@link #releaseGroupResults} is null.
-	 * 
+	 *
+	 * This will create a new <code>ArrayList</code> if {@link #releaseGroupResults} is
+	 * null.
 	 * @param releaseGroupResult The release result to add
 	 */
 
@@ -48,4 +48,5 @@ public class ReleaseGroupSearchResultsWs2 extends ListElement {
 	public ReleaseGroupListWs2 getReleaseGroupList() {
 		return releaseGroupList;
 	}
+
 }

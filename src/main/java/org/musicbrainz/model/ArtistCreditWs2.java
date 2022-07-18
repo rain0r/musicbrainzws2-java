@@ -6,11 +6,13 @@ import java.util.logging.Logger;
 
 /**
  * <p>
- * An Artist Credit used instead of Artist for collaborations or performance name variations.
+ * An Artist Credit used instead of Artist for collaborations or performance name
+ * variations.
  * </p>
- * 
+ *
  */
 public class ArtistCreditWs2 {
+
 	private static Logger log = Logger.getLogger(ArtistCreditWs2.class.getName());
 
 	/**

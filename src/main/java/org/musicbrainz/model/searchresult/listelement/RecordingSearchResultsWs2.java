@@ -23,9 +23,8 @@ public class RecordingSearchResultsWs2 extends ListElement {
 
 	/**
 	 * Convenience method to adds an track result to the list.
-	 * 
+	 *
 	 * This will create a new <code>ArrayList</code> if {@link #recordingResults} is null.
-	 * 
 	 * @param recordingResult The track result to add
 	 */
 	public void addRecordingResult(RecordingResultWs2 recordingResult) {
@@ -41,4 +40,5 @@ public class RecordingSearchResultsWs2 extends ListElement {
 		recordingList.setCount(getCount());
 		recordingList.setOffset(getOffset());
 	}
+
 }

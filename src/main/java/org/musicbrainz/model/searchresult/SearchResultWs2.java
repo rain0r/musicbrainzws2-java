@@ -6,9 +6,10 @@ import org.musicbrainz.model.entity.EntityWs2;
  * Represents a search result.
  */
 public abstract class SearchResultWs2 {
+
 	/**
-	 * The score indicates how good this result matches the search parameters. The higher the value, the better the
-	 * match. The score is a number between 0 and 100.
+	 * The score indicates how good this result matches the search parameters. The higher
+	 * the value, the better the match. The score is a number between 0 and 100.
 	 */
 	private Integer score;
 
@@ -44,4 +45,5 @@ public abstract class SearchResultWs2 {
 	public void setEntity(EntityWs2 entity) {
 		this.entity = entity;
 	}
+
 }

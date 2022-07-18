@@ -11,4 +11,5 @@ public interface EntitySearchInterface {
 	public List getNextPage();
 
 	public boolean hasMore();
+
 }

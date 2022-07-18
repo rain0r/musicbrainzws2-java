@@ -89,4 +89,5 @@ public class LabelBrowseWs2 extends BrowseWs2 {
 		int sz = le.getLabels().size();
 		return le;
 	}
+
 }

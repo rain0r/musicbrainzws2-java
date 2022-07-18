@@ -45,4 +45,5 @@ public class ArtistSearchbyName implements EntitySearchInterface {
 	public boolean hasMore() {
 		return q.hasMore();
 	}
+
 }

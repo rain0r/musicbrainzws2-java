@@ -31,17 +31,17 @@ import org.musicbrainz.wsxml.element.Metadata;
 
 /*  Implements Lookup query in WS2.
 
- * You can perform a lookup of an entity when you have the MBID 
- * for that entity: 
+ * You can perform a lookup of an entity when you have the MBID
+ * for that entity:
 
  * lookup:   /<ENTITY>/<MBID>?inc=<INC>
- * 
+ *
  * Use an Include to set the INC paramters.
- * 
- * Note that the number of linked entities returned is always limited to 25, 
+ *
+ * Note that the number of linked entities returned is always limited to 25,
  * if you need the remaining results, or more related info,
- * you will have to perform a browse request. 
- * 
+ * you will have to perform a browse request.
+ *
  */
 
 public class LookUpWs2 extends QueryWs2 {
@@ -52,7 +52,6 @@ public class LookUpWs2 extends QueryWs2 {
 
 	/**
 	 * Custom WebService Constructor
-	 * 
 	 * @param ws An implementation of {@link WebService}
 	 */
 	public LookUpWs2(WebService ws) {
@@ -350,4 +349,5 @@ public class LookUpWs2 extends QueryWs2 {
 		else
 			return md.getReleaseListWs2();
 	}
+
 }

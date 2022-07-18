@@ -6,11 +6,13 @@ import java.beans.PropertyChangeSupport;
 import org.mc2.util.miscellaneous.CalendarUtils;
 
 /**
- * A DiscTrack consists of tracknum, offset and length of the drack IN the disc. Primary used to rebuild TOC.
+ * A DiscTrack consists of tracknum, offset and length of the drack IN the disc. Primary
+ * used to rebuild TOC.
  *
  */
 
 public class DiscTrackWs2 {
+
 	/** track number on disc */
 	private int tracknum;
 
@@ -137,4 +139,5 @@ public class DiscTrackWs2 {
 	public void removePropertyChangeListener(PropertyChangeListener listener) {
 		changeSupport.removePropertyChangeListener(listener);
 	}
+
 }

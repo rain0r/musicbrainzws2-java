@@ -1,6 +1,6 @@
 /*
  * A controller for the Recording Entity.
- * 
+ *
  */
 package org.musicbrainz.controller;
 
@@ -126,4 +126,5 @@ public class Puid extends Controller {
 
 		return puidWs2;
 	}
+
 }

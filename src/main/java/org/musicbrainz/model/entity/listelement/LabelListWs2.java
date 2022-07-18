@@ -29,9 +29,8 @@ public class LabelListWs2 extends ListElement {
 
 	/**
 	 * Adds a release to the list.
-	 * 
+	 *
 	 * It will also create and set new ArrayList if {@link #labels} is null.
-	 * 
 	 * @param label The label to add
 	 */
 	public void addLabel(LabelWs2 label) {
@@ -49,4 +48,5 @@ public class LabelListWs2 extends ListElement {
 
 		labels.addAll(labelList);
 	}
+
 }

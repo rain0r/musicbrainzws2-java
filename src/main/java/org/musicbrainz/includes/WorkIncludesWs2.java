@@ -35,7 +35,7 @@ public class WorkIncludesWs2 extends IncludesWs2 {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.musicbrainz.webservice.Includes#createIncludeTags()
 	 */
 	@Override

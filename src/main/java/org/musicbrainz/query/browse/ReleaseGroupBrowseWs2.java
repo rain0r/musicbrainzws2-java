@@ -89,4 +89,5 @@ public class ReleaseGroupBrowseWs2 extends BrowseWs2 {
 		int sz = le.getReleaseGroups().size();
 		return le;
 	}
+
 }

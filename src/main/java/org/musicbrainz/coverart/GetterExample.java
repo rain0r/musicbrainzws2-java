@@ -12,7 +12,6 @@ import fm.last.musicbrainz.coverart.CoverArtImage;
 import fm.last.musicbrainz.coverart.impl.DefaultCoverArtArchiveClient;
 
 /**
- *
  * @author marco
  */
 public class GetterExample {
@@ -34,7 +33,8 @@ public class GetterExample {
 
 					coverArtImage.getImage().read();
 
-					// File output = new File(mbid.toString() + "_" + coverArtImage.getId() + ".jpg");
+					// File output = new File(mbid.toString() + "_" +
+					// coverArtImage.getId() + ".jpg");
 					// FileUtils.copyInputStreamToFile(coverArtImage.getImage(), output);
 				}
 			}
@@ -43,4 +43,5 @@ public class GetterExample {
 			// ...
 		}
 	}
+
 }

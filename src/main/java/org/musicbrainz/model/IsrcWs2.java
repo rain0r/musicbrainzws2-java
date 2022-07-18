@@ -11,6 +11,7 @@ import org.musicbrainz.model.entity.listelement.RecordingListWs2;
  * A single Puid and the List of referring recordings.
  */
 public class IsrcWs2 {
+
 	private static Logger log = Logger.getLogger(IsrcWs2.class.getName());
 
 	private String id;
@@ -39,7 +40,6 @@ public class IsrcWs2 {
 
 	/**
 	 * Gets the underlying <code>List</clode> of recording.
-	 * 
 	 * @return the recordings
 	 */
 	public List<RecordingWs2> getRecordings() {
@@ -48,9 +48,8 @@ public class IsrcWs2 {
 
 	/**
 	 * Sets the underlying <code>List</clode> of recordings.
-	 * 
+	 *
 	 * Note: This will implicitly create a new {@link #recordingList} if it is null.
-	 * 
 	 * @param recordings the recordings to set
 	 */
 	public void setRecordings(List<RecordingWs2> recordings) {
@@ -79,11 +78,11 @@ public class IsrcWs2 {
 	 * <p>
 	 * Adds a recording to the underlying <code>List</clode> of recordings.
 	 * </p>
-	 * 
+	 *
 	 * <p>
-	 * <em>Note: This will implicitly create a new {@link #recordingList} if it is null.</em>
+	 * <em>Note: This will implicitly create a new {@link #recordingList} if it is
+	 * null.</em>
 	 * </p>
-	 * 
 	 * @param recording The {@link RecordingWs2} to add.
 	 */
 	public void addRecording(RecordingWs2 recording) {
@@ -95,11 +94,12 @@ public class IsrcWs2 {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
 		return id;
 	}
+
 }

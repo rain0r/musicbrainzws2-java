@@ -9,6 +9,7 @@ import org.musicbrainz.model.entity.ReleaseWs2;
 import org.musicbrainz.utils.MbUtils;
 
 public class ReleaseTypeFilterWs2 implements FilterWs2 {
+
 	private boolean typeAll = true;
 
 	private boolean typeNat = false;
@@ -278,4 +279,5 @@ public class ReleaseTypeFilterWs2 implements FilterWs2 {
 	public void setTypeAll(boolean typeAll) {
 		this.typeAll = typeAll;
 	}
+
 }

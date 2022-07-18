@@ -46,4 +46,5 @@ public class ReleaseSearchbyTitle {
 	public boolean hasMore() {
 		return q.hasMore();
 	}
+
 }

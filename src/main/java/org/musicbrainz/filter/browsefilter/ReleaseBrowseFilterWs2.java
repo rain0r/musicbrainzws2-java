@@ -7,6 +7,7 @@ import org.musicbrainz.filter.ReleaseStatusFilterWs2;
 import org.musicbrainz.filter.ReleaseTypeFilterWs2;
 
 public class ReleaseBrowseFilterWs2 extends BrowseFilterWs2 {
+
 	private ReleaseTypeFilterWs2 releaseTypeFilter = new ReleaseTypeFilterWs2();
 
 	private ReleaseStatusFilterWs2 releaseStatusFilter = new ReleaseStatusFilterWs2();

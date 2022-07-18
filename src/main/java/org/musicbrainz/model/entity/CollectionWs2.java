@@ -8,7 +8,7 @@ import org.musicbrainz.model.entity.listelement.ReleaseListWs2;
  * <p>
  * Represents a Collection.
  * </p>
- * 
+ *
  */
 public class CollectionWs2 extends EntityWs2 {
 
@@ -18,7 +18,7 @@ public class CollectionWs2 extends EntityWs2 {
 
 	/**
 	 * The list of releases from this artist.
-	 * 
+	 *
 	 */
 	private ReleaseListWs2 releaseList = new ReleaseListWs2();
 
@@ -52,7 +52,6 @@ public class CollectionWs2 extends EntityWs2 {
 
 	/**
 	 * Gets the underlying <code>List</clode> of releases.
-	 * 
 	 * @return the releases
 	 */
 	public List<ReleaseWs2> getReleases() {
@@ -61,9 +60,8 @@ public class CollectionWs2 extends EntityWs2 {
 
 	/**
 	 * Sets the underlying <code>List</clode> of releases.
-	 * 
+	 *
 	 * Note: This will implicitly create a new {@link #releaseList} if it is null.
-	 * 
 	 * @param releases the releases to set
 	 */
 	public void setReleases(List<ReleaseWs2> releases) {
@@ -92,11 +90,11 @@ public class CollectionWs2 extends EntityWs2 {
 	 * <p>
 	 * Adds a release to the underlying <code>List</clode> of releases.
 	 * </p>
-	 * 
+	 *
 	 * <p>
-	 * <em>Note: This will implicitly create a new {@link #releaseList} if it is null.</em>
+	 * <em>Note: This will implicitly create a new {@link #releaseList} if it is
+	 * null.</em>
 	 * </p>
-	 * 
 	 * @param release The {@link ReleaseWs2} to add.
 	 */
 	public void addRelease(ReleaseWs2 release) {

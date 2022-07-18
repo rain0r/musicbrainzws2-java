@@ -2,7 +2,7 @@ package org.musicbrainz.wsxml;
 
 /**
  * This exception occurs if the xml stream could not be parsed (i.e if it is not valid).
- * 
+ *
  * @author Patrick Ruhkopf
  */
 public class MbXMLParseException extends MbXMLException {
@@ -22,4 +22,5 @@ public class MbXMLParseException extends MbXMLException {
 	public MbXMLParseException(Throwable cause) {
 		super(cause);
 	}
+
 }

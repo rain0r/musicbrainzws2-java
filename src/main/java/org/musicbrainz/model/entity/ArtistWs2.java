@@ -16,7 +16,7 @@ import org.musicbrainz.model.entity.listelement.WorkListWs2;
  * <p>
  * Represents an artist.
  * </p>
- * 
+ *
  */
 public class ArtistWs2 extends EntityWs2 {
 
@@ -35,8 +35,8 @@ public class ArtistWs2 extends EntityWs2 {
 	private String name;
 
 	/**
-	 * The sort name is the artist's name in a special format which is better suited for lexicographic sorting. The
-	 * MusicBrainz style guide specifies this format.
+	 * The sort name is the artist's name in a special format which is better suited for
+	 * lexicographic sorting. The MusicBrainz style guide specifies this format.
 	 */
 	private String sortName;
 
@@ -71,14 +71,14 @@ public class ArtistWs2 extends EntityWs2 {
 
 	/**
 	 * The list of releases from this artist.
-	 * 
+	 *
 	 */
 	private ReleaseListWs2 releaseList = new ReleaseListWs2();
 
 	/*
-	 * This One only include releases where this artist isn't the main artist but has just contributed one or more
-	 * tracks (aka VA-Releases).
-	 * 
+	 * This One only include releases where this artist isn't the main artist but has just
+	 * contributed one or more tracks (aka VA-Releases).
+	 *
 	 */
 	private ReleaseListWs2 releaseListVA = new ReleaseListWs2();
 
@@ -316,7 +316,6 @@ public class ArtistWs2 extends EntityWs2 {
 
 	/**
 	 * Gets the underlying <code>List</clode> of releaseGroups.
-	 * 
 	 * @return the releaseGroups
 	 */
 	public List<ReleaseGroupWs2> getReleaseGroups() {
@@ -325,9 +324,8 @@ public class ArtistWs2 extends EntityWs2 {
 
 	/**
 	 * Sets the underlying <code>List</clode> of releaseGroups.
-	 * 
+	 *
 	 * Note: This will implicitly create a new {@link #releaseGroupList} if it is null.
-	 * 
 	 * @param releaseGroups the releaseGroups to set
 	 */
 	public void setReleaseGroups(List<ReleaseGroupWs2> releaseGroups) {
@@ -356,11 +354,11 @@ public class ArtistWs2 extends EntityWs2 {
 	 * <p>
 	 * Adds a releaseGroup to the underlying <code>List</clode> of releaseGroups.
 	 * </p>
-	 * 
+	 *
 	 * <p>
-	 * <em>Note: This will implicitly create a new {@link #releaseGroupList} if it is null.</em>
+	 * <em>Note: This will implicitly create a new {@link #releaseGroupList} if it is
+	 * null.</em>
 	 * </p>
-	 * 
 	 * @param releaseGroup The {@link ReleaseGroupWs2} to add.
 	 */
 	public void addReleaseGroup(ReleaseGroupWs2 releaseGroup) {
@@ -372,7 +370,6 @@ public class ArtistWs2 extends EntityWs2 {
 
 	/**
 	 * Gets the underlying <code>List</clode> of releases.
-	 * 
 	 * @return the releases
 	 */
 	public List<ReleaseWs2> getReleases() {
@@ -381,9 +378,8 @@ public class ArtistWs2 extends EntityWs2 {
 
 	/**
 	 * Sets the underlying <code>List</clode> of releases.
-	 * 
+	 *
 	 * Note: This will implicitly create a new {@link #releaseList} if it is null.
-	 * 
 	 * @param releases the releases to set
 	 */
 	public void setReleases(List<ReleaseWs2> releases) {
@@ -412,11 +408,11 @@ public class ArtistWs2 extends EntityWs2 {
 	 * <p>
 	 * Adds a release to the underlying <code>List</clode> of releases.
 	 * </p>
-	 * 
+	 *
 	 * <p>
-	 * <em>Note: This will implicitly create a new {@link #releaseList} if it is null.</em>
+	 * <em>Note: This will implicitly create a new {@link #releaseList} if it is
+	 * null.</em>
 	 * </p>
-	 * 
 	 * @param release The {@link ReleaseWs2} to add.
 	 */
 	public void addRelease(ReleaseWs2 release) {
@@ -428,7 +424,6 @@ public class ArtistWs2 extends EntityWs2 {
 
 	/**
 	 * Gets the underlying <code>List</clode> of releases.
-	 * 
 	 * @return the releases
 	 */
 	public List<ReleaseWs2> getReleasesVA() {
@@ -437,9 +432,8 @@ public class ArtistWs2 extends EntityWs2 {
 
 	/**
 	 * Sets the underlying <code>List</clode> of releases.
-	 * 
+	 *
 	 * Note: This will implicitly create a new {@link #releaseList} if it is null.
-	 * 
 	 * @param releasesVA the releasesVA to set
 	 */
 	public void setReleasesVA(List<ReleaseWs2> releasesVA) {
@@ -468,11 +462,11 @@ public class ArtistWs2 extends EntityWs2 {
 	 * <p>
 	 * Adds a release to the underlying <code>List</clode> of releases.
 	 * </p>
-	 * 
+	 *
 	 * <p>
-	 * <em>Note: This will implicitly create a new {@link #releaseList} if it is null.</em>
+	 * <em>Note: This will implicitly create a new {@link #releaseList} if it is
+	 * null.</em>
 	 * </p>
-	 * 
 	 * @param releaseVA The {@link ReleaseWs2} to add.
 	 */
 	public void addReleaseVA(ReleaseWs2 releaseVA) {
@@ -484,7 +478,6 @@ public class ArtistWs2 extends EntityWs2 {
 
 	/**
 	 * Gets the underlying <code>List</clode> of releases.
-	 * 
 	 * @return the recordings
 	 */
 	public List<RecordingWs2> getRecordings() {
@@ -493,9 +486,8 @@ public class ArtistWs2 extends EntityWs2 {
 
 	/**
 	 * Sets the underlying <code>List</clode> of recordings.
-	 * 
+	 *
 	 * Note: This will implicitly create a new {@link #recordingList} if it is null.
-	 * 
 	 * @param recordings the recordings to set
 	 */
 	public void setRecordings(List<RecordingWs2> recordings) {
@@ -524,11 +516,11 @@ public class ArtistWs2 extends EntityWs2 {
 	 * <p>
 	 * Adds a recording to the underlying <code>List</clode> of recordings.
 	 * </p>
-	 * 
+	 *
 	 * <p>
-	 * <em>Note: This will implicitly create a new {@link #recordingList} if it is null.</em>
+	 * <em>Note: This will implicitly create a new {@link #recordingList} if it is
+	 * null.</em>
 	 * </p>
-	 * 
 	 * @param recording The {@link RecordingWs2} to add.
 	 */
 	public void addRecording(RecordingWs2 recording) {
@@ -540,7 +532,6 @@ public class ArtistWs2 extends EntityWs2 {
 
 	/**
 	 * Gets the underlying <code>List</clode> of works.
-	 * 
 	 * @return the works
 	 */
 	public List<WorkWs2> getWorks() {
@@ -549,9 +540,8 @@ public class ArtistWs2 extends EntityWs2 {
 
 	/**
 	 * Sets the underlying <code>List</clode> of works.
-	 * 
+	 *
 	 * Note: This will implicitly create a new {@link #workList} if it is null.
-	 * 
 	 * @param works the works to set
 	 */
 	public void setWorks(List<WorkWs2> works) {
@@ -580,11 +570,10 @@ public class ArtistWs2 extends EntityWs2 {
 	 * <p>
 	 * Adds a work to the underlying <code>List</clode> of works.
 	 * </p>
-	 * 
+	 *
 	 * <p>
 	 * <em>Note: This will implicitly create a new {@link #workList} if it is null.</em>
 	 * </p>
-	 * 
 	 * @param work The {@link WorkWs2} to add.
 	 */
 	public void addWork(WorkWs2 work) {
@@ -596,15 +585,15 @@ public class ArtistWs2 extends EntityWs2 {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#toString()
 	 */
 	/**
-	 * 
+	 *
 	 * Returns a unique artist name using disambiguation (if available).
-	 * 
-	 * This method returns the artist name together with the disambiguation attribute in parenthesis if it exists.
-	 * Example: 'Vixen (Hip-hop)'.
+	 *
+	 * This method returns the artist name together with the disambiguation attribute in
+	 * parenthesis if it exists. Example: 'Vixen (Hip-hop)'.
 	 */
 	public String getUniqueName() {
 		if (StringUtils.isNotBlank(disambiguation)) {
@@ -630,4 +619,5 @@ public class ArtistWs2 extends EntityWs2 {
 
 		return false;
 	}
+
 }

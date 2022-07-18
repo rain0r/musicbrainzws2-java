@@ -9,6 +9,7 @@ import org.musicbrainz.model.entity.LabelWs2;
  * A single Element (label and catalog) of an LabelInfoList
  */
 public class LabelInfoWs2 {
+
 	private static Logger log = Logger.getLogger(LabelInfoWs2.class.getName());
 
 	private String catalogNumber;
@@ -69,7 +70,7 @@ public class LabelInfoWs2 {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see java.lang.Object#toString()
 	 */
 	@Override

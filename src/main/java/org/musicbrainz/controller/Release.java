@@ -1,6 +1,6 @@
 /*
  * A controller for the Release Entity.
- * 
+ *
  */
 package org.musicbrainz.controller;
 
@@ -23,9 +23,8 @@ public class Release extends Controller {
 
 	/**
 	 * Creates a Release with a custom user agent string.
-	 * 
-	 * @param applicationName custom application name used in user agent string. If <code>null</code>, the default user
-	 * agent string is used
+	 * @param applicationName custom application name used in user agent string. If
+	 * <code>null</code>, the default user agent string is used
 	 * @param applicationVersion custom application version used in user agent string
 	 * @param applicationContact contact URL or author email used in user agent string
 	 */
@@ -216,7 +215,8 @@ public class Release extends Controller {
 
 			if (transit == null)
 				return null;
-			if (getRelease() == null || !getRelease().equals(transit)) // release is changed.
+			if (getRelease() == null || !getRelease().equals(transit)) // release is
+																		// changed.
 			{
 				setEntity(transit);
 				setIncluded(inc);
@@ -248,4 +248,5 @@ public class Release extends Controller {
 
 		return getRelease();
 	}
+
 }

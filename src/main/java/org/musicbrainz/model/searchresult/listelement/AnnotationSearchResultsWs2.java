@@ -34,4 +34,5 @@ public class AnnotationSearchResultsWs2 extends ListElement {
 	public AnnotationListWs2 getAnnotationList() {
 		return annotationList;
 	}
+
 }

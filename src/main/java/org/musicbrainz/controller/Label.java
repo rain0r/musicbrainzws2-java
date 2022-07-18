@@ -1,6 +1,6 @@
 /*
  * A controller for the Label Entity.
- * 
+ *
  */
 package org.musicbrainz.controller;
 
@@ -361,7 +361,8 @@ public class Label extends Controller {
 		if (labelinc.isDiscids())
 			inc.setDiscids(true);
 
-		// if (recordinginc.isRecordingLevelRelations()) inc.setRecordingLevelRelations(true);
+		// if (recordinginc.isRecordingLevelRelations())
+		// inc.setRecordingLevelRelations(true);
 		// if (recordinginc.isWorkLevelRelations()) inc.setWorkLevelRelations(true);
 
 		return inc;

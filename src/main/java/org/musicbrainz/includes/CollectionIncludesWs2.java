@@ -6,19 +6,22 @@ import java.util.List;
  * <p>
  * A specification on how much data to return with a collection.
  * </p>
- * 
+ *
  */
 public class CollectionIncludesWs2 extends IncludesWs2 {
+
 	/*
-	 * Subqueries The inc= is parameter allows you to request more information to be included about the entity. Any of
-	 * the entities directly linked to the entity can be included.
+	 * Subqueries The inc= is parameter allows you to request more information to be
+	 * included about the entity. Any of the entities directly linked to the entity can be
+	 * included.
 	 */
 
 	private boolean releases = false;
 
 	/*
-	 * inc= arguments which affect subqueries Some additional inc= parameters are supported to specify how much of the
-	 * data about the linked entities should be included:
+	 * inc= arguments which affect subqueries Some additional inc= parameters are
+	 * supported to specify how much of the data about the linked entities should be
+	 * included:
 	 */
 	private boolean discids = false;
 
@@ -129,4 +132,5 @@ public class CollectionIncludesWs2 extends IncludesWs2 {
 
 		return target;
 	}
+
 }

@@ -11,9 +11,10 @@ import org.musicbrainz.wsxml.element.ListElement;
  * <p>
  * A List of Media (Medium) referred by a release
  * </p>
- * 
+ *
  */
 public class ReleaseEventListWs2 extends ListElement {
+
 	private static Logger log = Logger.getLogger(ReleaseEventListWs2.class.getName());
 
 	private List<ReleaseEventWs2> events = new ArrayList<ReleaseEventWs2>();
@@ -53,4 +54,5 @@ public class ReleaseEventListWs2 extends ListElement {
 		}
 		return out;
 	}
+
 }

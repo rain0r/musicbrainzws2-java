@@ -10,6 +10,7 @@ import org.musicbrainz.model.entity.RecordingWs2;
  * A single recordings in a Medium by a specific release. .
  */
 public class TrackWs2 {
+
 	private static Logger log = Logger.getLogger(TrackWs2.class.getName());
 
 	private String id;
@@ -160,4 +161,5 @@ public class TrackWs2 {
 	public String toString() {
 		return getPosition() + " - " + getTitle();
 	}
+
 }

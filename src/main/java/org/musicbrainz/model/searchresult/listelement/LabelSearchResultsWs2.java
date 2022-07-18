@@ -34,4 +34,5 @@ public class LabelSearchResultsWs2 extends ListElement {
 	public LabelListWs2 getLabelList() {
 		return labelList;
 	}
+
 }

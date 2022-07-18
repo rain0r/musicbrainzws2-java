@@ -18,12 +18,13 @@ import org.musicbrainz.wsxml.element.Metadata;
  * <p>
  * A simple interface to the MusicBrainz web service version 2.
  * </p>
- * 
+ *
  * <p>
- * This is a facade which provides a simple interface to the MusicBrainz web service version 2. It hides all the details
- * like fetching data from a server, parsing the XML and creating an object tree. Using this class, you can request data
- * by ID or search the collection of all resources (artists, releases, or tracks) to retrieve those matching given
- * criteria.
+ * This is a facade which provides a simple interface to the MusicBrainz web service
+ * version 2. It hides all the details like fetching data from a server, parsing the XML
+ * and creating an object tree. Using this class, you can request data by ID or search the
+ * collection of all resources (artists, releases, or tracks) to retrieve those matching
+ * given criteria.
  * </p>
  *
  */
@@ -48,7 +49,6 @@ public class QueryWs2 extends DomainsWs2 {
 
 	/**
 	 * Custom WebService Constructor
-	 * 
 	 * @param ws An implementation of {@link WebService}
 	 */
 	protected QueryWs2(WebService ws) {
@@ -56,8 +56,8 @@ public class QueryWs2 extends DomainsWs2 {
 	}
 
 	/**
-	 * Uses the {@link WebService} instance to make a GET request and returns a {@link Metadata} object.
-	 * 
+	 * Uses the {@link WebService} instance to make a GET request and returns a
+	 * {@link Metadata} object.
 	 * @param entity
 	 * @param id
 	 * @param includes
@@ -101,4 +101,5 @@ public class QueryWs2 extends DomainsWs2 {
 	protected void setWs(WebService ws) {
 		this.ws = ws;
 	}
+
 }

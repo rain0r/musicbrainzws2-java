@@ -47,4 +47,5 @@ public class WorkSearchbyArtistId {
 	public boolean hasMore() {
 		return q.hasMore();
 	}
+
 }

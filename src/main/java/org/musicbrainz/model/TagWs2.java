@@ -4,11 +4,12 @@ import java.util.logging.Logger;
 
 /**
  * <p>
- * Represents a Tag for an entity (not release at the moment). count is the times this tag has been added by different
- * people.
+ * Represents a Tag for an entity (not release at the moment). count is the times this tag
+ * has been added by different people.
  * </p>
  */
 public class TagWs2 {
+
 	public TagWs2() {
 
 	}

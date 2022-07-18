@@ -36,17 +36,16 @@ import org.musicbrainz.wsxml.MbXmlParser;
  * <p>
  * Represents a parsed Music Metadata XML document.
  * </p>
- * 
+ *
  * <p>
- * The Music Metadata XML format is very flexible and may contain a diverse set of data (e.g. an artist, a release and a
- * list of tracks), but usually only a small subset is used (either an artist, a release or a track, or a lists of
- * objects from one class).
+ * The Music Metadata XML format is very flexible and may contain a diverse set of data
+ * (e.g. an artist, a release and a list of tracks), but usually only a small subset is
+ * used (either an artist, a release or a track, or a lists of objects from one class).
  * </p>
- * 
- * 
+ *
  * @see Query
  * @see MbXmlParser
- * 
+ *
  */
 public class Metadata {
 
@@ -292,4 +291,5 @@ public class Metadata {
 	public void setSubmissionWs2(SubmissionWs2 submissionWs2) {
 		this.submissionWs2 = submissionWs2;
 	}
+
 }

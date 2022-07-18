@@ -120,4 +120,5 @@ public class JDOMWriterWs2 extends DomainsWs2 implements MbXmlWriter {
 		serializer.output(doc, outData);
 		return outData.toString("UTF-8");
 	}
+
 }

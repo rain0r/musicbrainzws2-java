@@ -14,6 +14,7 @@ import org.musicbrainz.utils.MbUtils;
  * Rapresents a Work
  */
 public class WorkWs2 extends EntityWs2 {
+
 	// TODO: Should we add the typeURI URI definitions?
 	// Seems they are work in progress...
 
@@ -176,4 +177,5 @@ public class WorkWs2 extends EntityWs2 {
 
 		return false;
 	}
+
 }

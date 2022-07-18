@@ -4,7 +4,7 @@ import java.util.Map;
 
 /**
  * Search annotations by ID for any entity.
- * 
+ *
  */
 public class AnnotationSearchtFilterWs2 extends SearchFilterWs2 {
 
@@ -14,7 +14,7 @@ public class AnnotationSearchtFilterWs2 extends SearchFilterWs2 {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.musicbrainz.webservice.Filter()
 	 */
 	public AnnotationSearchtFilterWs2() {

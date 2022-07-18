@@ -41,4 +41,5 @@ public class AnnotationListWs2 extends ListElement {
 
 		annotations.addAll(annotationList);
 	}
+
 }

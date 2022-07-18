@@ -1,7 +1,8 @@
 package org.musicbrainz.webservice;
 
 /**
- * An security exception that is thrown when a user is not authorized to access a particular resource.
+ * An security exception that is thrown when a user is not authorized to access a
+ * particular resource.
  */
 public class AuthorizationException extends WebServiceException {
 

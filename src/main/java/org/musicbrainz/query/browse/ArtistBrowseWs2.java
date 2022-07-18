@@ -90,4 +90,5 @@ public class ArtistBrowseWs2 extends BrowseWs2 {
 		int sz = le.getArtists().size();
 		return le;
 	}
+
 }

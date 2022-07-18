@@ -6,11 +6,12 @@ import java.util.Map;
  * <p>
  * A filter for the artist collection.
  * </p>
- * 
+ *
  * <p>
- * Note that the <code>name</code> and <code>query</code> properties may not be used together.
+ * Note that the <code>name</code> and <code>query</code> properties may not be used
+ * together.
  * </p>
- * 
+ *
  */
 public class ArtistSearchFilterWs2 extends SearchFilterWs2 {
 

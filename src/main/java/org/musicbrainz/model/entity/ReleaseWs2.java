@@ -19,7 +19,7 @@ import org.musicbrainz.model.ReleaseEventListWs2;
  * <p>
  * Represents a release.
  * </p>
- * 
+ *
  */
 public class ReleaseWs2 extends EntityWs2 {
 

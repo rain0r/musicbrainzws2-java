@@ -20,4 +20,5 @@ public class WorkResultWs2 extends SearchResultWs2 {
 	public void setWork(WorkWs2 work) {
 		super.setEntity(work);
 	}
+
 }

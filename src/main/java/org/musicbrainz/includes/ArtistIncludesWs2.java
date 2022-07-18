@@ -14,8 +14,9 @@ public class ArtistIncludesWs2 extends IncludesWs2 {
 	private boolean aliases = false;
 
 	/*
-	 * Subqueries The inc= is parameter allows you to request more information to be included about the entity. Any of
-	 * the entities directly linked to the entity can be included.
+	 * Subqueries The inc= is parameter allows you to request more information to be
+	 * included about the entity. Any of the entities directly linked to the entity can be
+	 * included.
 	 */
 	private boolean recordings = false;
 
@@ -24,11 +25,13 @@ public class ArtistIncludesWs2 extends IncludesWs2 {
 	private boolean releaseGroups = false;
 
 	private boolean works = false;
+
 	// private boolean labels = false; Is in mmd but not allowed in ws
 
 	/*
-	 * inc= arguments which affect subqueries Some additional inc= parameters are supported to specify how much of the
-	 * data about the linked entities should be included:
+	 * inc= arguments which affect subqueries Some additional inc= parameters are
+	 * supported to specify how much of the data about the linked entities should be
+	 * included:
 	 */
 	private boolean discids = false;
 
@@ -41,9 +44,10 @@ public class ArtistIncludesWs2 extends IncludesWs2 {
 	private boolean variousArtists = false;
 
 	/*
-	 * include only those releases where the artist appears on one of the tracks, but not in the artist credit for the
-	 * release itself (this is only valid on a /ws/2/artist?inc=releases request)
-	 * 
+	 * include only those releases where the artist appears on one of the tracks, but not
+	 * in the artist credit for the release itself (this is only valid on a
+	 * /ws/2/artist?inc=releases request)
+	 *
 	 * /** Default constructor
 	 */
 	public ArtistIncludesWs2() {
@@ -52,7 +56,7 @@ public class ArtistIncludesWs2 extends IncludesWs2 {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.musicbrainz.webservice.Includes#createIncludeTags()
 	 */
 	@Override
@@ -284,4 +288,5 @@ public class ArtistIncludesWs2 extends IncludesWs2 {
 		target.setIsrcs(isIsrcs());
 		return target;
 	}
+
 }

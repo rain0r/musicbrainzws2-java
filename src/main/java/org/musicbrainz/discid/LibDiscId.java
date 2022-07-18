@@ -3,17 +3,17 @@
    MusicBrainz -- The Internet music metadatabase
 
    Copyright (C) 2006 Matthias Friedrich
-   
+
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Lesser General Public
    License as published by the Free Software Foundation; either
    version 2.1 of the License, or (at your option) any later version.
-   
+
    This library is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
    Lesser General Public License for more details.
-   
+
    You should have received a copy of the GNU Lesser General Public
    License along with this library; if not, write to the Free Software
    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
@@ -29,11 +29,14 @@ import java.net.URL;
  * Direct translator for MusicBrainz libdiscid, as found at
  * <a href="http://musicbrainz.org/doc/libdiscid">http://musicbrainz.org/doc/libdiscid</a>
  * <p/>
- * While it is possible, this class is not intended to be used directly. Please use the {@link DiscInfo} utility class.
+ * While it is possible, this class is not intended to be used directly. Please use the
+ * {@link DiscInfo} utility class.
+ *
  * @see DiscInfo
  * @author Andrew Taylor <andy@benow.ca>
  */
 public class LibDiscId {
+
 	private static final String LIBNAME = "discid-java";
 
 	static {
@@ -68,7 +71,6 @@ public class LibDiscId {
 
 	/**
 	 * Read from a given device
-	 * 
 	 * @param device
 	 * @throws DiscIdException
 	 */
@@ -131,14 +133,15 @@ public class LibDiscId {
 	/**
 	 * Read the disc in the given CD-ROM/DVD-ROM drive.
 	 *
-	 * This function reads the disc in the drive specified by the given device identifier. If the device is NULL, the
-	 * default drive, as returned by discid_get_default_device() is used.
+	 * This function reads the disc in the drive specified by the given device identifier.
+	 * If the device is NULL, the default drive, as returned by
+	 * discid_get_default_device() is used.
 	 *
-	 * On error, this function returns false and sets the error message which you can access using
-	 * discid_get_error_msg(). In this case, the other functions won't return meaningful values and should not be used.
+	 * On error, this function returns false and sets the error message which you can
+	 * access using discid_get_error_msg(). In this case, the other functions won't return
+	 * meaningful values and should not be used.
 	 *
 	 * This function may be used multiple times with the same DiscId object.
-	 *
 	 * @param d a DiscId object created by discid_new()
 	 * @param device an operating system dependent device identifier, or NULL
 	 * @return true if successful, or false on error.
@@ -168,9 +171,8 @@ public class LibDiscId {
 	/**
 	 * Return a human-readable error message.
 	 *
-	 * This function may only be used if discid_read() failed. The returned error message is only valid as long as the
-	 * DiscId object exists.
-	 *
+	 * This function may only be used if discid_read() failed. The returned error message
+	 * is only valid as long as the DiscId object exists.
 	 * @param d a DiscId object created by discid_new()
 	 * @return a string describing the error that occurred
 	 */
@@ -179,12 +181,13 @@ public class LibDiscId {
 	/**
 	 * Provides the TOC of a known CD.
 	 *
-	 * This function may be used if the TOC has been read earlier and you want to calculate the disc ID afterwards,
-	 * without accessing the disc drive. It replaces the discid_read function in this case.
+	 * This function may be used if the TOC has been read earlier and you want to
+	 * calculate the disc ID afterwards, without accessing the disc drive. It replaces the
+	 * discid_read function in this case.
 	 *
-	 * The offsets parameter points to an array which contains the track offsets for each track. The first element,
-	 * offsets[0], is the leadout track. It must contain the total number of sectors on the disc.
-	 *
+	 * The offsets parameter points to an array which contains the track offsets for each
+	 * track. The first element, offsets[0], is the leadout track. It must contain the
+	 * total number of sectors on the disc.
 	 * @param first the number of the first audio track on disc (usually one)
 	 * @param last the number of the last audio track on the disc
 	 * @param offsets a pointer to an array of 100 track offsets
@@ -198,7 +201,6 @@ public class LibDiscId {
 
 	/**
 	 * Return a MusicBrainz DiscID after a read has been done.
-	 *
 	 * @return a string containing a MusicBrainz DiscID
 	 * @throws DiscIdException
 	 */
@@ -210,7 +212,6 @@ public class LibDiscId {
 
 	/**
 	 * Return a FreeDB DiscID.
-	 *
 	 * @return a string containing a FreeDB DiscID
 	 * @throws DiscIdException
 	 */
@@ -223,8 +224,9 @@ public class LibDiscId {
 	/**
 	 * Return an URL for submitting the DiscID to MusicBrainz.
 	 *
-	 * The URL leads to an interactive disc submission wizard that guides the user through the process of associating
-	 * this disc's DiscID with a release in the MusicBrainz database.
+	 * The URL leads to an interactive disc submission wizard that guides the user through
+	 * the process of associating this disc's DiscID with a release in the MusicBrainz
+	 * database.
 	 *
 	 * The returned string is only valid as long as the DiscId object exists.
 	 * @return URL
@@ -247,10 +249,10 @@ public class LibDiscId {
 	/**
 	 * Return an URL for retrieving CD information from MusicBrainz' web service
 	 *
-	 * The URL provides the CD information in XML. See http://musicbrainz.org/development/mmd for details.
+	 * The URL provides the CD information in XML. See
+	 * http://musicbrainz.org/development/mmd for details.
 	 *
 	 * The returned string is only valid as long as the DiscId object exists.
-	 *
 	 * @return a string containing an URL
 	 * @throws DiscIdException
 	 */
@@ -262,7 +264,6 @@ public class LibDiscId {
 
 	/**
 	 * Return the name of the default disc drive for this operating system.
-	 *
 	 * @return a string containing an operating system dependent device identifier
 	 * @throws DiscIdException
 	 */
@@ -276,7 +277,6 @@ public class LibDiscId {
 
 	/**
 	 * Return the number of the first track on this disc.
-	 *
 	 * @return the number of the first track
 	 * @throws DiscIdException
 	 */
@@ -288,7 +288,6 @@ public class LibDiscId {
 
 	/**
 	 * Return the number of the last track on this disc.
-	 *
 	 * @return the number of the last track
 	 * @throws DiscIdException
 	 */
@@ -300,7 +299,6 @@ public class LibDiscId {
 
 	/**
 	 * Return the length of the disc in sectors.
-	 *
 	 * @return the length of the disc in sectors
 	 * @throws DiscIdException
 	 */
@@ -313,9 +311,8 @@ public class LibDiscId {
 	/**
 	 * Return the sector offset of a track.
 	 *
-	 * Only track numbers between (and including) discid_get_first_track_num() and discid_get_last_track_num() may be
-	 * used.
-	 *
+	 * Only track numbers between (and including) discid_get_first_track_num() and
+	 * discid_get_last_track_num() may be used.
 	 * @param trackNum the number of a track
 	 * @return sector offset of the specified track
 	 * @throws DiscIdException
@@ -329,8 +326,8 @@ public class LibDiscId {
 	/**
 	 * Return the length of a track in sectors.
 	 *
-	 * Only track numbers between (and including) discid_get_first_track_num() and discid_get_last_track_num() may be
-	 * used.
+	 * Only track numbers between (and including) discid_get_first_track_num() and
+	 * discid_get_last_track_num() may be used.
 	 * @param trackNum the number of a track
 	 * @return length of the specified track
 	 * @throws DiscIdException

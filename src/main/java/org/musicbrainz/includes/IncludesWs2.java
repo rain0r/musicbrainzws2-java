@@ -9,7 +9,7 @@ import org.musicbrainz.DomainsWs2;
  * <p>
  * A specification on how much data to return with an entity.
  * </p>
- * 
+ *
  */
 public class IncludesWs2 extends DomainsWs2 {
 
@@ -19,8 +19,9 @@ public class IncludesWs2 extends DomainsWs2 {
 	// private boolean aliases = false;
 
 	/*
-	 * Subqueries The inc= is parameter allows you to request more information to be included about the entity. Any of
-	 * the entities directly linked to the entity can be included.
+	 * Subqueries The inc= is parameter allows you to request more information to be
+	 * included about the entity. Any of the entities directly linked to the entity can be
+	 * included.
 	 */
 	// private boolean labels = false;
 	// private boolean artists = false;
@@ -30,8 +31,9 @@ public class IncludesWs2 extends DomainsWs2 {
 	// private boolean recordings = false;
 
 	/*
-	 * inc= arguments which affect subqueries Some additional inc= parameters are supported to specify how much of the
-	 * data about the linked entities should be included:
+	 * inc= arguments which affect subqueries Some additional inc= parameters are
+	 * supported to specify how much of the data about the linked entities should be
+	 * included:
 	 */
 	// private boolean discids = false;
 	// private boolean media = false;
@@ -41,10 +43,12 @@ public class IncludesWs2 extends DomainsWs2 {
 	// private boolean variousArtists = false;
 
 	/*
-	 * include only those releases where the artist appears on one of the tracks, but not in the artist credit for the
-	 * release itself (this is only valid on a /ws/2/artist?inc=releases request)
-	 * 
-	 * /*Relationships inc= arguments to include relationships work exactly like they do in /ws/1:
+	 * include only those releases where the artist appears on one of the tracks, but not
+	 * in the artist credit for the release itself (this is only valid on a
+	 * /ws/2/artist?inc=releases request)
+	 *
+	 * /*Relationships inc= arguments to include relationships work exactly like they do
+	 * in /ws/1:
 	 */
 	private boolean annotation = false;
 
@@ -412,4 +416,5 @@ public class IncludesWs2 extends DomainsWs2 {
 
 		return target;
 	}
+
 }

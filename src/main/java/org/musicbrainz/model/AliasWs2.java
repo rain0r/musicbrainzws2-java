@@ -6,8 +6,9 @@ import java.util.logging.Logger;
  * <p>
  * Represents an alias for Artist, Works or Labels
  * </p>
- * The alias locale is interesting mostly for transliterations and indicates which locale is used for the alias value.
- * To represent the locale, iso-3166-2 codes like 'ja', 'en', or 'it' are used.
+ * The alias locale is interesting mostly for transliterations and indicates which locale
+ * is used for the alias value. To represent the locale, iso-3166-2 codes like 'ja', 'en',
+ * or 'it' are used.
  * </p>
  */
 public class AliasWs2 {
@@ -169,4 +170,5 @@ public class AliasWs2 {
 	public void setEnded(boolean ended) {
 		this.ended = ended;
 	}
+
 }

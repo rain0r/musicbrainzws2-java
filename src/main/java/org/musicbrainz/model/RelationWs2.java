@@ -12,16 +12,18 @@ import org.musicbrainz.model.entity.EntityWs2;
  * <p>
  * Represents a relation between two Entities.
  * </p>
- * 
+ *
  * <p>
- * There may be an arbitrary number of relations between all first class objects in MusicBrainz. The {@link RelationWs2}
- * itself has multiple attributes, which may or may not be used for a given relation type.
+ * There may be an arbitrary number of relations between all first class objects in
+ * MusicBrainz. The {@link RelationWs2} itself has multiple attributes, which may or may
+ * not be used for a given relation type.
  * </p>
- * 
+ *
  * <p>
- * Note that a {@link RelationWs2} object only contains the target but not the source end of the relation.
+ * Note that a {@link RelationWs2} object only contains the target but not the source end
+ * of the relation.
  * </p>
- * 
+ *
  */
 public class RelationWs2 extends DomainsWs2 {
 
@@ -88,7 +90,8 @@ public class RelationWs2 extends DomainsWs2 {
 	private String targetType;
 
 	/**
-	 * One of {@link RelationWs2#DIR_FORWARD}, {@link RelationWs2#DIR_BACKWARD} or {@link RelationWs2#DIR_BOTH}
+	 * One of {@link RelationWs2#DIR_FORWARD}, {@link RelationWs2#DIR_BACKWARD} or
+	 * {@link RelationWs2#DIR_BOTH}
 	 */
 	private String direction = DIR_BOTH;
 
@@ -189,8 +192,8 @@ public class RelationWs2 extends DomainsWs2 {
 	}
 
 	/**
-	 * Note: This setter will prepend a (default) URI unless the parameter <code>type</code> is not already an URI.
-	 * 
+	 * Note: This setter will prepend a (default) URI unless the parameter
+	 * <code>type</code> is not already an URI.
 	 * @param type the relationType to set
 	 */
 	public void setType(String type) {
@@ -214,7 +217,6 @@ public class RelationWs2 extends DomainsWs2 {
 
 	/**
 	 * Returns the targetId
-	 * 
 	 * @return the targetId
 	 */
 	public String getTargetId() {
@@ -269,4 +271,5 @@ public class RelationWs2 extends DomainsWs2 {
 	public void setEnded(boolean ended) {
 		this.ended = ended;
 	}
+
 }

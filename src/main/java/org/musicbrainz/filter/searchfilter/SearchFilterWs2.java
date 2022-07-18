@@ -7,10 +7,12 @@ import org.musicbrainz.DomainsWs2;
 import org.musicbrainz.filter.FilterWs2;
 
 /**
- * This abstract class implemets a {@link FilterWs2} and provides some common properties and functions.
- * 
+ * This abstract class implemets a {@link FilterWs2} and provides some common properties
+ * and functions.
+ *
  */
 public abstract class SearchFilterWs2 implements FilterWs2 {
+
 	public static final String LIMIT = DomainsWs2.LIMIT_FILTER;
 
 	public static final String OFFSET = DomainsWs2.OFFSET_FILTER;
@@ -28,8 +30,8 @@ public abstract class SearchFilterWs2 implements FilterWs2 {
 	private Long offset = null;
 
 	/**
-	 * The minimum score of the query results. Only affect the execution of a next page fetch if the last result of
-	 * previous page was < minScore.
+	 * The minimum score of the query results. Only affect the execution of a next page
+	 * fetch if the last result of previous page was < minScore.
 	 */
 	private Long minScore = null;
 
@@ -48,10 +50,10 @@ public abstract class SearchFilterWs2 implements FilterWs2 {
 
 	/**
 	 * Full constructor
-	 * 
+	 *
 	 * The <code>query</code> parameter may contain a query in
-	 * <a href="http://lucene.apache.org/java/docs/queryparsersyntax.html"> Lucene syntax</a>.
-	 * 
+	 * <a href="http://lucene.apache.org/java/docs/queryparsersyntax.html"> Lucene
+	 * syntax</a>.
 	 * @param limit The maximum number of artists to return
 	 * @param offset Start results at this zero-based offset
 	 * @param query A string containing a query in Lucene syntax
@@ -67,7 +69,7 @@ public abstract class SearchFilterWs2 implements FilterWs2 {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see org.musicbrainz.webservice.Filter#createParameters()
 	 */
 	public Map<String, String> createParameters() {
@@ -138,4 +140,5 @@ public abstract class SearchFilterWs2 implements FilterWs2 {
 	public void setQuery(String query) {
 		this.query = query;
 	}
+
 }

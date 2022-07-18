@@ -45,4 +45,5 @@ public class RecordingSearchbyTitle {
 	public boolean hasMore() {
 		return q.hasMore();
 	}
+
 }

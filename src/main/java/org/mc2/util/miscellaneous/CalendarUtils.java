@@ -6,7 +6,6 @@ import java.util.TimeZone;
 import org.mc2.util.exceptions.MC2Exception;
 
 /**
- *
  * @author marco
  */
 public class CalendarUtils {
@@ -81,7 +80,8 @@ public class CalendarUtils {
 				throw new MC2Exception("invalid time format, should be MM:SS:CC");
 			}
 			/*
-			 * Used calendar just as a entry validation. Strange stuffs with dayligth saving offset...
+			 * Used calendar just as a entry validation. Strange stuffs with dayligth
+			 * saving offset...
 			 */
 			long timecal = cal.getTimeInMillis();
 			long timeOffset = timecal + offset;
@@ -167,7 +167,8 @@ public class CalendarUtils {
 				throw new MC2Exception("invalid time format, should be HH:MM:SS");
 			}
 			/*
-			 * Used calendar just as a entry validation. Strange stuffs with dayligth saving offset...
+			 * Used calendar just as a entry validation. Strange stuffs with dayligth
+			 * saving offset...
 			 */
 			long timecal = cal.getTimeInMillis();
 			long timeOffset = timecal + offset;
@@ -189,4 +190,5 @@ public class CalendarUtils {
 	public static int calcDurationInSector(String durSt) throws MC2Exception {
 		return calcDurationInSector(calcDurationInMillis(durSt));
 	}
+
 }

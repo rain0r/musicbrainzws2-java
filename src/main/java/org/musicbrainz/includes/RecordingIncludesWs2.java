@@ -6,7 +6,7 @@ import java.util.List;
  * <p>
  * A specification on how much data to return with a recording.
  * </p>
- * 
+ *
  */
 public class RecordingIncludesWs2 extends IncludesWs2 {
 
@@ -121,4 +121,5 @@ public class RecordingIncludesWs2 extends IncludesWs2 {
 		target.setIsrcs(isIsrcs());
 		return target;
 	}
+
 }

@@ -1,12 +1,13 @@
 package org.musicbrainz.webservice;
 
 /**
- * A request exception indicates that the web service request was invalid (e.g. invalid id or include tags).
+ * A request exception indicates that the web service request was invalid (e.g. invalid id
+ * or include tags).
  */
 public class RequestException extends WebServiceException {
 
 	/**
-	 * 
+	 *
 	 */
 	public RequestException() {
 		// TODO Auto-generated constructor stub

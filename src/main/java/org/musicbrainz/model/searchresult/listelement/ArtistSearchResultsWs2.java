@@ -15,9 +15,8 @@ public class ArtistSearchResultsWs2 extends ListElement {
 
 	/**
 	 * Convenience method to adds an {@link ArtistResultWs2} to the list.
-	 * 
+	 *
 	 * This will create a new <code>ArrayList</code> if {@link #artistResults} is null.
-	 * 
 	 * @param artistResult The artist result to add
 	 */
 	public void addArtistResult(ArtistResultWs2 artistResult) {
@@ -42,4 +41,5 @@ public class ArtistSearchResultsWs2 extends ListElement {
 	public ArtistListWs2 getArtistList() {
 		return artistList;
 	}
+
 }

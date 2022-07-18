@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Each Submission could contain requests for many entities. An EntityElement is the specific entity request
- * description.
- * 
+ * Each Submission could contain requests for many entities. An EntityElement is the
+ * specific entity request description.
+ *
  **/
 public class EntityElement {
 
 	/*
 	 * The entity type. Must be one of LABEL ARTIST RELEASEGROUP WORK RECORDING
-	 * 
+	 *
 	 */
 	private String entityType;
 
@@ -22,13 +22,14 @@ public class EntityElement {
 	private String id;
 
 	/*
-	 * The tag list for the entity. Notes that this wil replace the current tag list, so be sure to include ALL the tags
-	 * you want apply to this entity.
+	 * The tag list for the entity. Notes that this wil replace the current tag list, so
+	 * be sure to include ALL the tags you want apply to this entity.
 	 */
 	private List<String> tagList = new ArrayList<String>();
 
 	/*
-	 * The new rating for the entity. Notes that the rating to be submitted range from 0 to 100.
+	 * The new rating for the entity. Notes that the rating to be submitted range from 0
+	 * to 100.
 	 */
 	private int userRating = 0;
 

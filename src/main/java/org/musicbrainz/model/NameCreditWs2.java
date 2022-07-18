@@ -9,6 +9,7 @@ import org.musicbrainz.model.entity.ArtistWs2;
  * A single Element (artist or artist name variation) of an Artist Credit
  */
 public class NameCreditWs2 {
+
 	private static Logger log = Logger.getLogger(NameCreditWs2.class.getName());
 
 	String joinphrase = null;
@@ -26,9 +27,10 @@ public class NameCreditWs2 {
 
 	/**
 	 * Complete Constructor
-	 * @param joinphrase A string containing the join sentence used to build the Artist Credit String ((i.e. &,/,
-	 * and,...)
-	 * @param name A string containing the name variation used to build the Artist Credit String
+	 * @param joinphrase A string containing the join sentence used to build the Artist
+	 * Credit String ((i.e. &,/, and,...)
+	 * @param name A string containing the name variation used to build the Artist Credit
+	 * String
 	 * @param artist the ArtistWs2 referred by the element.
 	 */
 	public NameCreditWs2(String joinphrase, String name, ArtistWs2 artist) {
@@ -89,4 +91,5 @@ public class NameCreditWs2 {
 
 		return getNameCreditString();
 	}
+
 }

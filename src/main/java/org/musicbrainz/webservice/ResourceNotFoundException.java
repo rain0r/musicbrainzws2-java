@@ -6,7 +6,7 @@ package org.musicbrainz.webservice;
 public class ResourceNotFoundException extends WebServiceException {
 
 	/**
-	 * 
+	 *
 	 */
 	public ResourceNotFoundException() {
 		// TODO Auto-generated constructor stub
