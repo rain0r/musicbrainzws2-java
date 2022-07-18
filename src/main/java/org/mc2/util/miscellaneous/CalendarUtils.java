@@ -28,7 +28,6 @@ public class CalendarUtils {
 
 		Integer mm = Secs / 60;
 		Integer ss = Secs - mm * 60;
-		Integer cc = csec;
 
 		String MM = mm.toString();
 		if (MM.length() == 1)
@@ -36,13 +35,11 @@ public class CalendarUtils {
 		String SS = ss.toString();
 		if (SS.length() == 1)
 			SS = "0".concat(SS);
-		String CC = cc.toString();
+		String CC = csec.toString();
 		if (CC.length() == 1)
 			CC = "0".concat(CC);
 
-		String Time = MM.concat(":").concat(SS).concat(":").concat(CC);
-
-		return Time;
+		return MM.concat(":").concat(SS).concat(":").concat(CC);
 	}
 
 	public static long calcIndexTimeInMillis(String durStr) throws MC2Exception {
@@ -128,7 +125,7 @@ public class CalendarUtils {
 	}
 
 	public static long calcDurationInMillis(int sectors) {
-		return new Long(sectors) * 1000 / 75;
+		return Long.valueOf(sectors * 1000 / 75);
 	}
 
 	public static long calcDurationInMillis(String durStr) throws MC2Exception {

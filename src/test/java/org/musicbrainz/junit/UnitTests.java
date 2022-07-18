@@ -5,44 +5,23 @@
 package org.musicbrainz.junit;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.musicbrainz.MBWS2Exception;
-import org.musicbrainz.controller.Artist;
-import org.musicbrainz.controller.Collection;
-import org.musicbrainz.controller.Disc;
-import org.musicbrainz.controller.Label;
-import org.musicbrainz.controller.Puid;
-import org.musicbrainz.controller.Recording;
-import org.musicbrainz.controller.Release;
-import org.musicbrainz.controller.ReleaseGroup;
-import org.musicbrainz.controller.Work;
+import org.musicbrainz.controller.*;
 import org.musicbrainz.filter.ReleaseTypeFilterWs2;
 import org.musicbrainz.model.DiscTrackWs2;
 import org.musicbrainz.model.PuidWs2;
 import org.musicbrainz.model.TagWs2;
-import org.musicbrainz.model.entity.ArtistWs2;
-import org.musicbrainz.model.entity.CollectionWs2;
-import org.musicbrainz.model.entity.DiscWs2;
-import org.musicbrainz.model.entity.LabelWs2;
-import org.musicbrainz.model.entity.RecordingWs2;
-import org.musicbrainz.model.entity.ReleaseGroupWs2;
-import org.musicbrainz.model.entity.ReleaseWs2;
-import org.musicbrainz.model.entity.WorkWs2;
-import org.musicbrainz.model.searchresult.ArtistResultWs2;
-import org.musicbrainz.model.searchresult.CollectionResultWs2;
-import org.musicbrainz.model.searchresult.LabelResultWs2;
-import org.musicbrainz.model.searchresult.RecordingResultWs2;
-import org.musicbrainz.model.searchresult.ReleaseGroupResultWs2;
-import org.musicbrainz.model.searchresult.ReleaseResultWs2;
-import org.musicbrainz.model.searchresult.WorkResultWs2;
+import org.musicbrainz.model.entity.*;
+import org.musicbrainz.model.searchresult.*;
 import org.musicbrainz.webservice.AuthorizationException;
 import org.musicbrainz.webservice.DefaultWebServiceWs2;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 // TODO proper unit test coverage is needed and all commented @test should pass
 public class UnitTests {
