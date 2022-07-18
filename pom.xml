@@ -87,7 +87,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
@@ -129,6 +129,19 @@
                 <plugin>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
                     <version>3.0.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.github.spotbugs</groupId>
+                    <artifactId>spotbugs-maven-plugin</artifactId>
+                    <version>4.7.0.0</version>
+                    <dependencies>
+                        <!-- overwrite dependency on spotbugs if you want to specify the version of spotbugs -->
+                        <dependency>
+                            <groupId>com.github.spotbugs</groupId>
+                            <artifactId>spotbugs</artifactId>
+                            <version>4.7.1</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
