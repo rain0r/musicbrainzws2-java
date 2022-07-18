@@ -4,9 +4,6 @@
  */
 package org.musicbrainz.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.musicbrainz.MBWS2Exception;
 import org.musicbrainz.filter.browsefilter.ReleaseBrowseFilterWs2;
 import org.musicbrainz.filter.searchfilter.LabelSearchFilterWs2;
@@ -18,6 +15,9 @@ import org.musicbrainz.model.searchresult.LabelResultWs2;
 import org.musicbrainz.query.browse.ReleaseBrowseWs2;
 import org.musicbrainz.query.lookUp.LookUpWs2;
 import org.musicbrainz.query.search.LabelSearchWs2;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Label extends Controller {
 
@@ -136,8 +136,9 @@ public class Label extends Controller {
 	protected LabelIncludesWs2 getIncrementalInc(LabelIncludesWs2 inc) {
 
 		inc = (LabelIncludesWs2) super.getIncrementalInc(inc);
-		if (getIncludes().isAliases() && !getIncluded().isAliases())
+		if (getIncludes().isAliases() && !getIncluded().isAliases()) {
 			inc.setAliases(true);
+		}
 
 		return inc;
 	}
@@ -148,10 +149,12 @@ public class Label extends Controller {
 	}
 
 	public LabelWs2 getComplete(LabelWs2 label) throws MBWS2Exception {
-		if (label == null)
+		if (label == null) {
 			return null;
-		if (label.getId() == null)
+		}
+		if (label.getId() == null) {
 			return label;
+		}
 
 		// save some field that come from search, but is missing in
 		// lookUp http://tickets.musicbrainz.org/browse/MBS-3982
@@ -161,10 +164,12 @@ public class Label extends Controller {
 	}
 
 	public final LabelWs2 lookUp(LabelWs2 label) throws MBWS2Exception {
-		if (label == null)
+		if (label == null) {
 			return null;
-		if (label.getId() == null)
+		}
+		if (label.getId() == null) {
 			return label;
+		}
 
 		// save some field that come from search, but is missing in
 		// lookUp http://tickets.musicbrainz.org/browse/MBS-3982
@@ -176,8 +181,9 @@ public class Label extends Controller {
 	public LabelWs2 getComplete(String id) throws MBWS2Exception {
 
 		setEntity(lookUp(id));
-		if (getIncludes().isReleases())
+		if (getIncludes().isReleases()) {
 			getFullReleaseList();
+		}
 
 		return getLabel();
 	}
@@ -203,8 +209,9 @@ public class Label extends Controller {
 
 		// Sanity check.
 		// to avoid the artist credits exceptions.
-		if (inc.isArtistCredits())
+		if (inc.isArtistCredits()) {
 			inc.setReleases(true);
+		}
 
 		if (needsLookUp(inc)) {
 			setLookUp(new LookUpWs2(getQueryWs()));
@@ -212,8 +219,9 @@ public class Label extends Controller {
 			LabelWs2 transit = null;
 			transit = getLookUp().getLabelById(id, inc);
 
-			if (transit == null)
+			if (transit == null) {
 				return null;
+			}
 			if (getLabel() == null || !getLabel().equals(transit)) // label is changed.
 			{
 				if (getIncoming() != null) {
@@ -240,8 +248,9 @@ public class Label extends Controller {
 				}
 			}
 		}
-		if (inc.isAnnotation())
+		if (inc.isAnnotation()) {
 			loadAnnotation(getLabel());
+		}
 
 		initBrowses();
 
@@ -269,15 +278,19 @@ public class Label extends Controller {
 
 	public List<ReleaseWs2> getFullReleaseList() {
 
-		if (getLabel() == null)
+		if (getLabel() == null) {
 			return null;
+		}
 		getIncludes().setReleases(true);
-		if (releaseBrowse == null)
+		if (releaseBrowse == null) {
 			initBrowses();
-		if (releaseBrowse == null)
+		}
+		if (releaseBrowse == null) {
 			return null;
-		if (!hasMoreReleases())
+		}
+		if (!hasMoreReleases()) {
 			return getLabel().getReleases();
+		}
 
 		List<ReleaseWs2> list = releaseBrowse.getFullList();
 
@@ -290,13 +303,16 @@ public class Label extends Controller {
 
 	public List<ReleaseWs2> getFirstReleaseListPage() {
 
-		if (getLabel() == null)
+		if (getLabel() == null) {
 			return null;
+		}
 		getIncludes().setReleases(true);
-		if (releaseBrowse == null)
+		if (releaseBrowse == null) {
 			initBrowses();
-		if (releaseBrowse == null)
+		}
+		if (releaseBrowse == null) {
 			return null;
+		}
 
 		List<ReleaseWs2> list = releaseBrowse.getFirstPage();
 
@@ -309,15 +325,19 @@ public class Label extends Controller {
 
 	public List<ReleaseWs2> getNextReleaseListPage() {
 
-		if (getLabel() == null)
+		if (getLabel() == null) {
 			return null;
+		}
 		getIncludes().setReleases(true);
-		if (releaseBrowse == null)
+		if (releaseBrowse == null) {
 			initBrowses();
-		if (releaseBrowse == null)
+		}
+		if (releaseBrowse == null) {
 			return null;
-		if (!hasMoreReleases())
+		}
+		if (!hasMoreReleases()) {
 			return new ArrayList<ReleaseWs2>();
+		}
 
 		List<ReleaseWs2> list = releaseBrowse.getNextPage();
 
@@ -329,10 +349,12 @@ public class Label extends Controller {
 	}
 
 	public boolean hasMoreReleases() {
-		if (getLabel() == null)
+		if (getLabel() == null) {
 			return true;
-		if (releaseBrowse == null)
+		}
+		if (releaseBrowse == null) {
 			return true;
+		}
 		return releaseBrowse.hasMore();
 	}
 
@@ -355,11 +377,13 @@ public class Label extends Controller {
 		inc.setRecordingRelations(false);
 		inc.setWorkRelations(false);
 
-		if (labelinc == null)
+		if (labelinc == null) {
 			return inc;
+		}
 
-		if (labelinc.isDiscids())
+		if (labelinc.isDiscids()) {
 			inc.setDiscids(true);
+		}
 
 		// if (recordinginc.isRecordingLevelRelations())
 		// inc.setRecordingLevelRelations(true);
@@ -386,8 +410,9 @@ public class Label extends Controller {
 	 * @return the releaseIncludes
 	 */
 	public ReleaseIncludesWs2 getReleaseIncludes() {
-		if (releaseIncludes == null)
+		if (releaseIncludes == null) {
 			releaseIncludes = getDefaultReleaseInclude(getIncludes());
+		}
 		return releaseIncludes;
 	}
 
@@ -402,8 +427,9 @@ public class Label extends Controller {
 	 * @return the releaseBrowseFilter
 	 */
 	public ReleaseBrowseFilterWs2 getReleaseBrowseFilter() {
-		if (releaseBrowseFilter == null)
+		if (releaseBrowseFilter == null) {
 			releaseBrowseFilter = getDefaultReleaseBrowseFilter();
+		}
 		return releaseBrowseFilter;
 	}
 
