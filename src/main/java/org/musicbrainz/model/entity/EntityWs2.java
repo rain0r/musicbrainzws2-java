@@ -1,20 +1,16 @@
 package org.musicbrainz.model.entity;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-
 import org.musicbrainz.DomainsWs2;
-import org.musicbrainz.model.AliasWs2;
-import org.musicbrainz.model.RatingsWs2;
-import org.musicbrainz.model.RelationListWs2;
-import org.musicbrainz.model.RelationWs2;
-import org.musicbrainz.model.TagWs2;
+import org.musicbrainz.model.*;
 import org.musicbrainz.model.searchresult.AnnotationResultWs2;
 import org.musicbrainz.query.search.readysearches.AnnotationSearchbyEntityId;
 import org.musicbrainz.utils.MbUtils;
 import org.musicbrainz.webservice.WebService;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * <p>
@@ -120,7 +116,7 @@ public abstract class EntityWs2 extends DomainsWs2 {
 	 * @param id the idUri to set
 	 */
 	public void setIdUri(String id) {
-		this.idUri = id;
+		idUri = id;
 	}
 
 	/**
@@ -193,12 +189,12 @@ public abstract class EntityWs2 extends DomainsWs2 {
 
 	/**
 	 * Returns a list of relations.
-	 *
+	 * <p>
 	 * You may use the <code>relationType</code> parameter to further restrict the
 	 * selection. If it is set, only relations with the given relation type are returned.
 	 * The <code>requiredAttributes</code> sequence lists attributes that have to be part
 	 * of all returned relations.
-	 *
+	 * <p>
 	 * If <code>direction</code> is set, only relations with the given reading direction
 	 * are returned. You can use the {@link RelationWs2#DIR_FORWARD},
 	 * {@link RelationWs2#DIR_BACKWARD}, and {@link RelationWs2#DIR_BOTH} constants for
@@ -213,29 +209,25 @@ public abstract class EntityWs2 extends DomainsWs2 {
 	public List<RelationWs2> getRelations(String targetType, String relationType, List<String> requiredAttributes,
 			String direction) {
 		List<RelationWs2> allRelations = new ArrayList<RelationWs2>();
-		if (relationList == null)
+		if (relationList == null) {
 			return allRelations;
+		}
 
 		for (RelationWs2 relation : relationList.getRelations()) {
 			// filter target type
-			if (targetType != null) {
-				if (!targetType.equals(relation.getTargetType())) {
-					continue;
-				}
+			if (targetType != null && !targetType.equals(relation.getTargetType())) {
+				continue;
+
 			}
 
 			// filter directions
-			if (direction != null) {
-				if (!direction.equals(relation.getDirection())) {
-					continue;
-				}
+			if (direction != null && !direction.equals(relation.getDirection())) {
+				continue;
 			}
 
 			// filter relation type
-			if (relationType != null) {
-				if (!relationType.equals(relation.getType())) {
-					continue;
-				}
+			if (relationType != null && !relationType.equals(relation.getType())) {
+				continue;
 			}
 
 			// filter attributes
@@ -256,17 +248,20 @@ public abstract class EntityWs2 extends DomainsWs2 {
 
 	public String getAnnotation(WebService ws) {
 
-		if (annotation != null)
+		if (annotation != null) {
 			return annotation;
+		}
 
 		List<String> annotations = new ArrayList<String>(0);
 
 		AnnotationSearchbyEntityId q;
 
-		if (ws == null)
+		if (ws == null) {
 			q = new AnnotationSearchbyEntityId(getId());
-		else
+		}
+		else {
 			q = new AnnotationSearchbyEntityId(ws, getId());
+		}
 
 		List<AnnotationResultWs2> annRes = q.getFullList();
 
@@ -276,8 +271,9 @@ public abstract class EntityWs2 extends DomainsWs2 {
 			}
 			AnnotationResultWs2 r = i.next();
 
-			if (r.getAnnotation().getText() != null && !r.getAnnotation().getText().isEmpty())
+			if (r.getAnnotation().getText() != null && !r.getAnnotation().getText().isEmpty()) {
 				annotations.add(r.getAnnotation().getText() + "\n");
+			}
 
 		}
 		annotation = Arrays.toString(annotations.toArray()).trim();
@@ -291,8 +287,9 @@ public abstract class EntityWs2 extends DomainsWs2 {
 	 * @return the rating
 	 */
 	public RatingsWs2 getRating() {
-		if (rating == null)
+		if (rating == null) {
 			rating = new RatingsWs2();
+		}
 		return rating;
 	}
 
@@ -307,8 +304,9 @@ public abstract class EntityWs2 extends DomainsWs2 {
 	 * @return the userRating
 	 */
 	public RatingsWs2 getUserRating() {
-		if (userRating == null)
+		if (userRating == null) {
 			userRating = new RatingsWs2();
+		}
 		return userRating;
 	}
 
