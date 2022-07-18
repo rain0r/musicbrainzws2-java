@@ -217,7 +217,7 @@ public class Label extends Controller {
 		if (needsLookUp(inc)) {
 			setLookUp(new LookUpWs2(getQueryWs()));
 
-			LabelWs2 transit = null;
+			LabelWs2 transit;
 			transit = getLookUp().getLabelById(id, inc);
 
 			if (transit == null) {
@@ -337,7 +337,7 @@ public class Label extends Controller {
 			return null;
 		}
 		if (!hasMoreReleases()) {
-			return new ArrayList<ReleaseWs2>();
+			return new ArrayList<>();
 		}
 
 		List<ReleaseWs2> list = releaseBrowse.getNextPage();
