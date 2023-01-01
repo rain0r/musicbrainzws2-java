@@ -1,5 +1,11 @@
 # musicbrainzws2-java
 
+Please see the upstream repo: [schnatterer/musicbrainzws2-java](https://github.com/schnatterer/musicbrainzws2-java)
+
+And maven repo: https://search.maven.org/artifact/info.schnatterer.musicbrainzws2-java/musicbrainzws2-java
+
+---
+
 This is a fork of a fork of `musicbrainzws2-java`, originally hosted [here](https://code.google.com/archive/p/musicbrainzws2-java/), then [here](https://github.com/schnatterer/musicbrainzws2-java). It includes several bugfixes as well as maven integration. The original [wiki](https://code.google.com/p/musicbrainzws2-java/w/list) was migrated and can now be found [here](https://github.com/schnatterer/musicbrainzws2-java/wiki).
 
 ## Changes
